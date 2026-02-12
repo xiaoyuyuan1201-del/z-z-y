@@ -48,7 +48,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-neutral-400 font-light tracking-wide mb-4"
         >
-          创意设计师 · 前端开发者
+          UI设计师 · 2025届毕业生
         </motion.p>
         
         {/* Bio */}
@@ -58,8 +58,8 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-neutral-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-light"
         >
-          专注于创造优雅、直觉的数字体验。将美学与功能完美融合，
-          打造令人难忘的作品。
+          专注UI设计、3D建模、动效设计与AI创作。
+          热爱探索设计与技术的无限可能。
         </motion.p>
         
         {/* CTA */}

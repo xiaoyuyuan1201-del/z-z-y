@@ -6,38 +6,38 @@ const skills = [
   {
     icon: Palette,
     title: 'UI/UX 设计',
-    description: '创造直觉、优雅的用户界面与体验',
+    description: '创造直觉、优雅的用户界面与交互体验',
     tools: ['Figma', 'Sketch', 'Adobe XD']
   },
   {
-    icon: Code,
-    title: '前端开发',
-    description: '构建响应式、高性能的网页应用',
-    tools: ['React', 'Vue', 'TypeScript']
-  },
-  {
     icon: Layers,
-    title: '品牌设计',
-    description: '塑造独特、令人难忘的品牌形象',
-    tools: ['Illustrator', 'Photoshop']
-  },
-  {
-    icon: Camera,
-    title: '摄影',
-    description: '捕捉瞬间，讲述视觉故事',
-    tools: ['Lightroom', 'Capture One']
-  },
-  {
-    icon: PenTool,
-    title: '插画设计',
-    description: '手绘与数字插画创作',
-    tools: ['Procreate', 'Illustrator']
+    title: '3D 建模',
+    description: '构建精致的三维模型与场景',
+    tools: ['Blender', 'C4D', '3ds Max']
   },
   {
     icon: Sparkles,
     title: '动效设计',
-    description: '为界面注入生命力',
-    tools: ['After Effects', 'Framer Motion']
+    description: '为界面注入生命力与流畅体验',
+    tools: ['After Effects', 'Principle', 'Lottie']
+  },
+  {
+    icon: PenTool,
+    title: 'AI 创作',
+    description: '运用AI工具探索设计新边界',
+    tools: ['Midjourney', 'Stable Diffusion', 'DALL·E']
+  },
+  {
+    icon: Camera,
+    title: '视觉设计',
+    description: '平面设计与品牌视觉系统',
+    tools: ['Photoshop', 'Illustrator']
+  },
+  {
+    icon: Code,
+    title: '原型交互',
+    description: '高保真原型与交互设计',
+    tools: ['Figma', 'ProtoPie', 'Framer']
   }
 ];
 

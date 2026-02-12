@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 
-const categories = ['全部', '设计', '开发', '摄影', '写作', '其他'];
+const categories = ['全部', 'UI设计', '建模', '动效', 'AI作品', '其他'];
 
 export default function WorksSection({ projects, isLoading }) {
   const [activeCategory, setActiveCategory] = useState('全部');
