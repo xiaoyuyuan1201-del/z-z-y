@@ -26,7 +26,7 @@ export default function HeroSection() {
         >
           <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-amber-400 to-orange-500 p-[2px]">
             <div className="w-full h-full rounded-full bg-neutral-900 flex items-center justify-center">
-              <span className="text-4xl font-light text-white">紫钰</span>
+              <span className="text-4xl font-light text-white">曾</span>
             </div>
           </div>
         </motion.div>
