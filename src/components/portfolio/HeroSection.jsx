@@ -70,16 +70,16 @@ export default function HeroSection() {
           className="mt-12 flex gap-4 justify-center"
         >
           <a 
-            href="#works"
+            href="#about"
             className="px-8 py-3 bg-white text-neutral-900 text-sm font-medium tracking-wide rounded-full hover:bg-neutral-200 transition-all duration-300"
           >
-            查看作品
+            了解我
           </a>
           <a 
-            href="#contact"
+            href="#works"
             className="px-8 py-3 border border-neutral-700 text-neutral-300 text-sm font-medium tracking-wide rounded-full hover:border-neutral-500 hover:text-white transition-all duration-300"
           >
-            联系我
+            查看作品
           </a>
         </motion.div>
       </div>
