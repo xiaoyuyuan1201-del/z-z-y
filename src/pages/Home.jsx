@@ -3,6 +3,7 @@ import { base44 } from '@/api/base44Client';
 import { useQuery } from '@tanstack/react-query';
 
 import HeroSection from '@/components/portfolio/HeroSection';
+import AboutSection from '@/components/portfolio/AboutSection';
 import WorksSection from '@/components/portfolio/WorksSection';
 import SkillsSection from '@/components/portfolio/SkillsSection';
 import ContactSection from '@/components/portfolio/ContactSection';
@@ -17,6 +18,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-neutral-950">
       <HeroSection />
+      <AboutSection />
       <WorksSection projects={projects} isLoading={isLoading} />
       <SkillsSection />
       <ContactSection />
