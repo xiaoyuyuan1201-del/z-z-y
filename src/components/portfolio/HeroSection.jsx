@@ -61,7 +61,8 @@ export default function HeroSection() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-8xl font-extralight text-white tracking-tight mb-6">
+          whileHover={{ letterSpacing: '0.05em', scale: 1.02 }}
+          className="text-6xl md:text-8xl font-extralight text-white tracking-tight mb-6 cursor-pointer transition-all">
 
           曾紫钰
         </motion.h1>
