@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center relative px-6 py-20">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1a1035] via-[#2d1f4e] to-[#0f0a1f]" />
       
       {/* Subtle grid pattern */}
       <div 
@@ -24,8 +24,8 @@ export default function HeroSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-8"
         >
-          <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-amber-400 to-orange-500 p-[2px]">
-            <div className="w-full h-full rounded-full bg-neutral-900 flex items-center justify-center">
+          <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-purple-400 to-pink-500 p-[2px]">
+            <div className="w-full h-full rounded-full bg-[#1a1035] flex items-center justify-center">
               <span className="text-4xl font-light text-white">曾</span>
             </div>
           </div>

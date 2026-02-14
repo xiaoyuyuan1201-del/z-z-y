@@ -65,7 +65,7 @@ const interests = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-32 px-6 bg-neutral-900">
+    <section id="about" className="py-32 px-6 bg-gradient-to-b from-[#1a1035] to-[#0f0a1f]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -75,7 +75,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <p className="text-amber-400 text-sm font-medium tracking-widest uppercase mb-4">
+          <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-4">
             关于我
           </p>
           <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight">
@@ -93,7 +93,7 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-1"
           >
-            <div className="bg-neutral-950 rounded-3xl p-6 border border-neutral-800 sticky top-8">
+            <div className="bg-[#0f0a1f]/80 rounded-3xl p-6 border border-purple-900/50 sticky top-8">
               {/* Avatar */}
               <div className="relative mb-6">
                 <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600 to-pink-500">
@@ -130,7 +130,7 @@ export default function AboutSection() {
                   <span>专业</span>
                   <span className="text-white">数字媒体艺术</span>
                 </div>
-                <div className="border-t border-neutral-800 my-4" />
+                <div className="border-t border-purple-900/50 my-4" />
                 <div className="flex items-center gap-2 text-neutral-400">
                   <Phone className="w-4 h-4" />
                   <span className="text-white">18373296050</span>
@@ -142,7 +142,7 @@ export default function AboutSection() {
               </div>
 
               {/* Tools */}
-              <div className="mt-6 pt-6 border-t border-neutral-800">
+              <div className="mt-6 pt-6 border-t border-purple-900/50">
                 <p className="text-neutral-500 text-xs mb-3">熟练工具</p>
                 <div className="flex flex-wrap gap-2">
                   {tools.map((tool) => (
@@ -159,7 +159,7 @@ export default function AboutSection() {
               {/* Resume Download */}
               <a 
                 href="#"
-                className="mt-6 w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-neutral-900 font-medium rounded-xl hover:shadow-lg hover:shadow-amber-500/25 transition-all duration-300"
+                className="mt-6 w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-neutral-900 font-medium rounded-xl hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
               >
                 <Download className="w-4 h-4" />
                 下载简历
@@ -176,7 +176,7 @@ export default function AboutSection() {
             className="lg:col-span-2 space-y-6"
           >
             <h3 className="text-2xl font-light text-white flex items-center gap-3">
-              <Briefcase className="w-6 h-6 text-amber-400" />
+              <Briefcase className="w-6 h-6 text-purple-400" />
               工作经历
             </h3>
 
@@ -187,19 +187,19 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-neutral-950 rounded-2xl p-6 border border-neutral-800"
+                className="bg-[#0f0a1f]/80 rounded-2xl p-6 border border-purple-900/50"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
                     <h4 className="text-white text-lg font-medium">{work.company}</h4>
-                    <p className="text-amber-400">{work.position}</p>
+                    <p className="text-purple-400">{work.position}</p>
                   </div>
                   <span className="text-neutral-500 text-sm mt-2 md:mt-0">{work.period}</span>
                 </div>
                 <ul className="space-y-2">
                   {work.highlights.map((highlight, i) => (
                     <li key={i} className="flex items-start gap-2 text-neutral-400 text-sm">
-                      <span className="text-amber-400 mt-1">•</span>
+                      <span className="text-purple-400 mt-1">•</span>
                       <span>{highlight}</span>
                     </li>
                   ))}
@@ -228,10 +228,10 @@ export default function AboutSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="p-4 rounded-2xl bg-neutral-950 border border-neutral-800 hover:border-amber-400/50 transition-colors text-center"
+                  className="p-4 rounded-2xl bg-[#0f0a1f]/80 border border-purple-900/50 hover:border-purple-400/50 transition-colors text-center"
                 >
-                  <div className="w-12 h-12 mx-auto rounded-xl bg-amber-500/10 flex items-center justify-center mb-3">
-                    <Icon className="w-5 h-5 text-amber-400" />
+                  <div className="w-12 h-12 mx-auto rounded-xl bg-purple-500/10 flex items-center justify-center mb-3">
+                    <Icon className="w-5 h-5 text-purple-400" />
                   </div>
                   <h4 className="text-white font-medium text-sm mb-1">{skill.title}</h4>
                   <p className="text-neutral-500 text-xs">{skill.description}</p>
@@ -258,7 +258,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="px-5 py-2 rounded-full border border-neutral-700 text-neutral-300 font-light hover:border-amber-400 hover:text-amber-400 transition-colors cursor-default"
+                className="px-5 py-2 rounded-full border border-neutral-700 text-neutral-300 font-light hover:border-purple-400 hover:text-purple-400 transition-colors cursor-default"
               >
                 {interest}
               </motion.span>

@@ -12,7 +12,7 @@ export default function WorksSection({ projects, isLoading }) {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <section id="works" className="py-32 px-6 bg-neutral-950">
+    <section id="works" className="py-32 px-6 bg-gradient-to-b from-[#0f0a1f] to-[#1a1035]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -22,7 +22,7 @@ export default function WorksSection({ projects, isLoading }) {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-amber-400 text-sm font-medium tracking-widest uppercase mb-4">
+          <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-4">
             作品集
           </p>
           <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight">
@@ -57,7 +57,7 @@ export default function WorksSection({ projects, isLoading }) {
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="aspect-[4/3] rounded-2xl bg-neutral-900 animate-pulse" />
+              <div key={i} className="aspect-[4/3] rounded-2xl bg-purple-900/20 animate-pulse" />
             ))}
           </div>
         ) : filteredProjects.length > 0 ? (

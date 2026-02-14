@@ -16,7 +16,7 @@ export default function Home() {
   });
 
   return (
-    <div className="min-h-screen bg-neutral-950">
+    <div className="min-h-screen bg-[#0f0a1f]">
       <HeroSection />
       <AboutSection />
       <WorksSection projects={projects} isLoading={isLoading} />
