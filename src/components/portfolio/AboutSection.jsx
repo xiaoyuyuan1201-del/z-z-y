@@ -173,44 +173,16 @@ export default function AboutSection() {
 
               {/* Tools */}
               <div className="relative pt-6 border-t border-purple-500/20 z-10">
-                <p className="text-neutral-300 text-xs font-semibold mb-5 tracking-widest uppercase">熟练工具</p>
-                <div className="grid grid-cols-3 gap-3">
-                  <div className="aspect-square rounded-xl bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-500/30 flex items-center justify-center group hover:border-purple-400/60 hover:bg-purple-500/15 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20">
-                    <div className="text-center">
-                      <img src="https://cdn.simpleicons.org/figma/A259FF" alt="Figma" className="w-9 h-9 mb-1.5 mx-auto opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
-                      <div className="text-[10px] text-neutral-400 group-hover:text-purple-300 transition-colors font-medium">Figma</div>
-                    </div>
-                  </div>
-                  <div className="aspect-square rounded-xl bg-gradient-to-br from-blue-600/10 to-blue-700/5 border border-blue-600/30 flex items-center justify-center group hover:border-blue-500/60 hover:bg-blue-600/15 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20">
-                    <div className="text-center">
-                      <img src="https://cdn.simpleicons.org/adobephotoshop/31A8FF" alt="Photoshop" className="w-9 h-9 mb-1.5 mx-auto opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
-                      <div className="text-[10px] text-neutral-400 group-hover:text-blue-300 transition-colors font-medium">PS</div>
-                    </div>
-                  </div>
-                  <div className="aspect-square rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-600/5 border border-orange-500/30 flex items-center justify-center group hover:border-orange-400/60 hover:bg-orange-500/15 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-orange-500/20">
-                    <div className="text-center">
-                      <img src="https://cdn.simpleicons.org/adobeillustrator/FF9A00" alt="Illustrator" className="w-9 h-9 mb-1.5 mx-auto opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
-                      <div className="text-[10px] text-neutral-400 group-hover:text-orange-300 transition-colors font-medium">AI</div>
-                    </div>
-                  </div>
-                  <div className="aspect-square rounded-xl bg-gradient-to-br from-indigo-500/10 to-indigo-600/5 border border-indigo-500/30 flex items-center justify-center group hover:border-indigo-400/60 hover:bg-indigo-500/15 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-indigo-500/20">
-                    <div className="text-center">
-                      <img src="https://cdn.simpleicons.org/adobeaftereffects/9999FF" alt="After Effects" className="w-9 h-9 mb-1.5 mx-auto opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
-                      <div className="text-[10px] text-neutral-400 group-hover:text-indigo-300 transition-colors font-medium">AE</div>
-                    </div>
-                  </div>
-                  <div className="aspect-square rounded-xl bg-gradient-to-br from-violet-600/10 to-violet-700/5 border border-violet-600/30 flex items-center justify-center group hover:border-violet-500/60 hover:bg-violet-600/15 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-violet-500/20">
-                    <div className="text-center">
-                      <img src="https://cdn.simpleicons.org/adobepremierepro/9999FF" alt="Premiere Pro" className="w-9 h-9 mb-1.5 mx-auto opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
-                      <div className="text-[10px] text-neutral-400 group-hover:text-violet-300 transition-colors font-medium">PR</div>
-                    </div>
-                  </div>
-                  <div className="aspect-square rounded-xl bg-gradient-to-br from-orange-400/10 to-orange-500/5 border border-orange-400/30 flex items-center justify-center group hover:border-orange-300/60 hover:bg-orange-400/15 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-orange-400/20">
-                    <div className="text-center">
-                      <img src="https://cdn.simpleicons.org/blender/F5792A" alt="Blender" className="w-9 h-9 mb-1.5 mx-auto opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" />
-                      <div className="text-[10px] text-neutral-400 group-hover:text-orange-200 transition-colors font-medium">Blender</div>
-                    </div>
-                  </div>
+                <h4 className="text-white text-base font-medium mb-5">技能工具</h4>
+                <div className="flex flex-wrap gap-2">
+                  {['Figma', 'Sketch', 'Adobe XD', 'Photoshop', 'Illustrator', 'After Effects', 'Blender', 'Midjourney', 'Stable Diffusion', 'Framer'].map((tool) => (
+                    <span
+                      key={tool}
+                      className="px-5 py-2.5 rounded-full border border-neutral-700/50 text-neutral-300 text-sm hover:border-purple-400/50 hover:text-white hover:bg-purple-500/5 transition-all duration-300 cursor-default"
+                    >
+                      {tool}
+                    </span>
+                  ))}
                 </div>
               </div>
 
