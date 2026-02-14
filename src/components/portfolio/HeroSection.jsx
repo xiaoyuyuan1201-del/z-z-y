@@ -5,16 +5,31 @@ import { ArrowDown } from 'lucide-react';
 export default function HeroSection() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center relative px-16 py-20">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0514] via-[#1a0f2e] to-[#000000]" />
-      
-      {/* Subtle grid pattern */}
-      <div 
-        className="absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }}
-      />
+      {/* Dynamic Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0514] via-[#1a0f2e] to-[#0a0514] relative overflow-hidden">
+        <motion.div
+          initial={{ x: '-50%', y: '-50%' }}
+          animate={{ x: ['-50%', '0%', '-50%'], y: ['-50%', '50%', '-50%'] }}
+          transition={{
+            duration: 12,
+            ease: 'linear',
+            repeat: Infinity,
+            repeatType: 'reverse',
+          }}
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-40"
+        />
+        <motion.div
+          initial={{ x: '50%', y: '50%' }}
+          animate={{ x: ['50%', '0%', '50%'], y: ['50%', '-50%', '50%'] }}
+          transition={{
+            duration: 15,
+            ease: 'linear',
+            repeat: Infinity,
+            repeatType: 'reverse',
+          }}
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-40"
+        />
+      </div>
       
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         {/* Avatar */}
@@ -22,10 +37,16 @@ export default function HeroSection() {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-8"
+          className="mb-8 group"
         >
-          <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-purple-400 to-pink-500 p-[2px]">
-            <div className="w-full h-full rounded-full bg-[#1a1035] flex items-center justify-center">
+          <div className="relative w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-purple-400 to-pink-500 p-[2px] overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-400/50 to-pink-500/50 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            />
+            <div className="relative w-full h-full rounded-full bg-[#1a1035] flex items-center justify-center">
               <span className="text-4xl font-light text-white">曾</span>
             </div>
           </div>
@@ -36,7 +57,7 @@ export default function HeroSection() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-extralight text-white tracking-tight mb-6"
+          className="text-6xl md:text-8xl font-extralight text-white tracking-tight mb-6"
         >
           曾紫钰
         </motion.h1>
@@ -46,7 +67,7 @@ export default function HeroSection() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-neutral-400 font-light tracking-wide mb-4"
+          className="text-xl md:text-2xl text-neutral-300 font-light tracking-wide mb-4"
         >
           UI设计师 · 2025届毕业生
         </motion.p>
@@ -56,7 +77,7 @@ export default function HeroSection() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-neutral-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-light"
+          className="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light"
         >
           专注UI设计、3D建模、动效设计与AI创作。
           热爱探索设计与技术的无限可能。
@@ -71,13 +92,13 @@ export default function HeroSection() {
         >
           <a 
             href="#about"
-            className="px-8 py-3 bg-white text-neutral-900 text-sm font-medium tracking-wide rounded-full hover:bg-neutral-200 transition-all duration-300"
+            className="px-8 py-4 bg-white text-neutral-900 text-base font-medium tracking-wide rounded-lg hover:bg-neutral-200 transition-all duration-300"
           >
             了解我
           </a>
           <a 
             href="#works"
-            className="px-8 py-3 border border-neutral-700 text-neutral-300 text-sm font-medium tracking-wide rounded-full hover:border-neutral-500 hover:text-white transition-all duration-300"
+            className="px-8 py-4 border border-neutral-700 text-neutral-300 text-base font-medium tracking-wide rounded-lg hover:border-neutral-500 hover:text-white transition-all duration-300"
           >
             查看作品
           </a>
