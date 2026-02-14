@@ -32,7 +32,7 @@ export default function HeroSection() {
           hueShift={0}
           colorFrequency={1}
           noise={0}
-          glow={2}
+          glow={0.2}
           bloom={1.5} />
 
       </div>
