@@ -12,13 +12,17 @@ import ContactSection from '@/components/portfolio/ContactSection';
 import Footer from '@/components/portfolio/Footer';
 
 export default function Home() {
+  const containerRef = useRef(null);
+  const { scrollY } = useScroll();
+  const yParallax = useTransform(scrollY, [0, 500], [0, 150]);
+  
   const { data: projects = [], isLoading } = useQuery({
     queryKey: ['projects'],
     queryFn: () => base44.entities.Project.list('-created_date'),
   });
 
   return (
-    <div className="min-h-screen bg-[#06042D] relative overflow-hidden">
+    <div className="min-h-screen bg-[#06042D] relative overflow-hidden" ref={containerRef}>
       {/* 舞台灯光背景效果 */}
       <style>{`
         @keyframes lightPulse {
