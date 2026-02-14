@@ -45,7 +45,7 @@ export default function WorksSection({ projects, isLoading }) {
               className={`px-5 py-2 text-sm font-light rounded-full transition-all duration-300 ${
                 activeCategory === category
                   ? 'bg-white text-neutral-900'
-                  : 'text-neutral-400 hover:text-white border border-neutral-800 hover:border-neutral-600'
+                  : 'text-neutral-400 hover:text-white border border-purple-900/50 hover:border-neutral-600'
               }`}
             >
               {category}

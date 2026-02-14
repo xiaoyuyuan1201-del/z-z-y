@@ -95,7 +95,7 @@ export default function ContactSection() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full border border-purple-900/50 flex items-center justify-center text-neutral-500 hover:text-white hover:border-neutral-600 transition-all duration-300"
+                  className="w-12 h-12 rounded-full border border-purple-900/50 flex items-center justify-center text-neutral-500 hover:text-white hover:border-purple-500/50 transition-all duration-300"
                   aria-label={social.label}
                 >
                   <Icon className="w-5 h-5" />
