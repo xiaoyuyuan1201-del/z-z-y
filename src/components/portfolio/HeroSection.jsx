@@ -127,10 +127,10 @@ export default function HeroSection() {
             查看作品
           </motion.a>
         </motion.div>
-      </div>
-      
-      {/* Scroll indicator */}
-      <motion.div
+        </motion.div>
+
+        {/* Scroll indicator */}
+        <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.2 }}
@@ -142,8 +142,7 @@ export default function HeroSection() {
 
           <ArrowDown className="w-5 h-5 text-neutral-600" />
         </motion.div>
-      </motion.div>
-      </motion.div>
+        </motion.div>
     </section>
   );
 
