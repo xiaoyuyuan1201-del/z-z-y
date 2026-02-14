@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
+import ProjectModal from './ProjectModal';
 
 const categories = ['全部', 'UI设计', '建模', '动效', 'AI作品', '其他'];
 
 export default function WorksSection({ projects, isLoading }) {
   const [activeCategory, setActiveCategory] = useState('全部');
+  const [selectedProject, setSelectedProject] = useState(null);
   
   const filteredProjects = activeCategory === '全部' 
     ? projects 
