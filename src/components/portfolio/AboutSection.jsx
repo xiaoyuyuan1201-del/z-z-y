@@ -122,8 +122,8 @@ export default function AboutSection() {
               </div>
 
               {/* Basic Info */}
-              <div className="relative space-y-3 text-sm mb-8 z-10">
-                <div className="grid grid-cols-2 gap-3">
+              <div className="relative mb-8 z-10">
+                <div className="grid grid-cols-3 gap-3">
                   <div className="group relative bg-gradient-to-br from-purple-500/10 to-purple-600/5 rounded-xl p-3 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                     <div className="text-neutral-400 text-[10px] uppercase tracking-wider mb-1 font-light">年龄</div>
                     <div className="text-white font-semibold text-base">23岁</div>
@@ -133,10 +133,10 @@ export default function AboutSection() {
                     <div className="text-neutral-400 text-[10px] uppercase tracking-wider mb-1 font-light">学历</div>
                     <div className="text-white font-semibold text-base">本科</div>
                   </div>
-                </div>
-                <div className="group relative bg-gradient-to-br from-purple-500/10 via-purple-600/5 to-pink-500/5 rounded-xl p-3 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                  <div className="text-neutral-400 text-[10px] uppercase tracking-wider mb-1 font-light">专业</div>
-                  <div className="text-white font-semibold text-sm">数字媒体艺术</div>
+                  <div className="group relative bg-gradient-to-br from-purple-500/10 via-purple-600/5 to-pink-500/5 rounded-xl p-3 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <div className="text-neutral-400 text-[10px] uppercase tracking-wider mb-1 font-light">专业</div>
+                    <div className="text-white font-semibold text-sm">数字媒体艺术</div>
+                  </div>
                 </div>
                 
                 {/* Elegant divider */}
