@@ -205,7 +205,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2"
+            className="lg:col-span-2 space-y-6"
           >
             <div className="flex items-center gap-4 mb-8">
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500/20 to-purple-600/10 flex items-center justify-center border border-purple-500/30">
@@ -214,37 +214,40 @@ export default function AboutSection() {
               <h3 className="text-3xl font-light text-white tracking-tight">工作经历</h3>
             </div>
 
-            <div className="space-y-12">
-              {workExperience.map((work, index) => (
-                <motion.div
-                  key={work.company}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative pl-8 border-l-2 border-purple-500/30"
-                >
-                  {/* Timeline dot */}
-                  <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-purple-500 border-4 border-[#0a0514]" />
-                  
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+            {workExperience.map((work, index) => (
+              <motion.div
+                key={work.company}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative group bg-gradient-to-br from-[#0f0a1f]/90 via-[#1a0f2e]/80 to-[#0f0a1f]/90 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30 hover:border-purple-400/50 shadow-xl shadow-purple-900/10 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 overflow-hidden"
+              >
+                {/* Background decoration */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 rounded-full blur-3xl group-hover:bg-purple-500/10 transition-all duration-500" />
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-pink-500/5 rounded-full blur-3xl group-hover:bg-pink-500/10 transition-all duration-500" />
+                
+                <div className="relative z-10">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                     <div>
-                      <h4 className="text-white text-xl font-semibold mb-2">{work.company}</h4>
-                      <span className="inline-block px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-sm">{work.position}</span>
+                      <h4 className="text-white text-xl font-semibold mb-2 group-hover:text-purple-200 transition-colors">{work.company}</h4>
+                      <div className="flex items-center gap-2">
+                        <span className="px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium">{work.position}</span>
+                      </div>
                     </div>
-                    <span className="text-neutral-400 text-sm mt-3 md:mt-0">{work.period}</span>
+                    <span className="text-neutral-400 text-sm mt-3 md:mt-0 font-medium bg-neutral-800/30 px-4 py-2 rounded-full border border-neutral-700/30">{work.period}</span>
                   </div>
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {work.highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-start gap-3 text-neutral-300 text-sm leading-relaxed">
-                        <span className="text-purple-400 mt-1.5">•</span>
-                        <span>{highlight}</span>
+                      <li key={i} className="flex items-start gap-3 text-neutral-300 text-sm leading-relaxed group/item">
+                        <span className="text-purple-400 mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-400 flex-shrink-0 group-hover/item:scale-150 transition-transform" />
+                        <span className="group-hover/item:text-white transition-colors">{highlight}</span>
                       </li>
                     ))}
                   </ul>
-                </motion.div>
-              ))}
-            </div>
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
 
