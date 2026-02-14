@@ -147,39 +147,39 @@ export default function AboutSection() {
               <div className="pt-6 border-t border-purple-900/30">
                 <p className="text-neutral-400 text-xs font-medium mb-4 tracking-wider">熟练工具</p>
                 <div className="grid grid-cols-3 gap-3">
-                  <div className="aspect-square rounded-xl bg-gradient-to-br from-blue-500/10 to-blue-600/5 border border-blue-500/20 flex items-center justify-center group hover:border-blue-500/40 transition-all cursor-pointer">
+                  <div className="aspect-square rounded-xl bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-500/20 flex items-center justify-center group hover:border-purple-500/40 transition-all cursor-pointer">
                     <div className="text-center">
-                      <div className="text-2xl mb-1">🎨</div>
-                      <div className="text-[10px] text-neutral-400 group-hover:text-blue-400 transition-colors">Figma</div>
+                      <img src="https://cdn.simpleicons.org/figma/A259FF" alt="Figma" className="w-8 h-8 mb-1 mx-auto opacity-80 group-hover:opacity-100 transition-opacity" />
+                      <div className="text-[10px] text-neutral-400 group-hover:text-purple-400 transition-colors">Figma</div>
                     </div>
                   </div>
                   <div className="aspect-square rounded-xl bg-gradient-to-br from-blue-600/10 to-blue-700/5 border border-blue-600/20 flex items-center justify-center group hover:border-blue-600/40 transition-all cursor-pointer">
                     <div className="text-center">
-                      <div className="text-2xl mb-1">🖼️</div>
+                      <img src="https://cdn.simpleicons.org/adobephotoshop/31A8FF" alt="Photoshop" className="w-8 h-8 mb-1 mx-auto opacity-80 group-hover:opacity-100 transition-opacity" />
                       <div className="text-[10px] text-neutral-400 group-hover:text-blue-500 transition-colors">PS</div>
                     </div>
                   </div>
                   <div className="aspect-square rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-600/5 border border-orange-500/20 flex items-center justify-center group hover:border-orange-500/40 transition-all cursor-pointer">
                     <div className="text-center">
-                      <div className="text-2xl mb-1">✏️</div>
+                      <img src="https://cdn.simpleicons.org/adobeillustrator/FF9A00" alt="Illustrator" className="w-8 h-8 mb-1 mx-auto opacity-80 group-hover:opacity-100 transition-opacity" />
                       <div className="text-[10px] text-neutral-400 group-hover:text-orange-400 transition-colors">AI</div>
                     </div>
                   </div>
                   <div className="aspect-square rounded-xl bg-gradient-to-br from-indigo-500/10 to-indigo-600/5 border border-indigo-500/20 flex items-center justify-center group hover:border-indigo-500/40 transition-all cursor-pointer">
                     <div className="text-center">
-                      <div className="text-2xl mb-1">🎬</div>
+                      <img src="https://cdn.simpleicons.org/adobeaftereffects/9999FF" alt="After Effects" className="w-8 h-8 mb-1 mx-auto opacity-80 group-hover:opacity-100 transition-opacity" />
                       <div className="text-[10px] text-neutral-400 group-hover:text-indigo-400 transition-colors">AE</div>
                     </div>
                   </div>
                   <div className="aspect-square rounded-xl bg-gradient-to-br from-violet-600/10 to-violet-700/5 border border-violet-600/20 flex items-center justify-center group hover:border-violet-600/40 transition-all cursor-pointer">
                     <div className="text-center">
-                      <div className="text-2xl mb-1">🎞️</div>
+                      <img src="https://cdn.simpleicons.org/adobepremierepro/9999FF" alt="Premiere Pro" className="w-8 h-8 mb-1 mx-auto opacity-80 group-hover:opacity-100 transition-opacity" />
                       <div className="text-[10px] text-neutral-400 group-hover:text-violet-400 transition-colors">PR</div>
                     </div>
                   </div>
                   <div className="aspect-square rounded-xl bg-gradient-to-br from-orange-400/10 to-orange-500/5 border border-orange-400/20 flex items-center justify-center group hover:border-orange-400/40 transition-all cursor-pointer">
                     <div className="text-center">
-                      <div className="text-2xl mb-1">🧊</div>
+                      <img src="https://cdn.simpleicons.org/blender/F5792A" alt="Blender" className="w-8 h-8 mb-1 mx-auto opacity-80 group-hover:opacity-100 transition-opacity" />
                       <div className="text-[10px] text-neutral-400 group-hover:text-orange-300 transition-colors">Blender</div>
                     </div>
                   </div>
