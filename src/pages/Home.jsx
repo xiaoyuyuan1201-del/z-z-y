@@ -3,6 +3,8 @@ import { base44 } from '@/api/base44Client';
 import { useQuery } from '@tanstack/react-query';
 import { useScroll, useTransform } from 'framer-motion';
 
+import { motion } from 'framer-motion';
+
 import Navbar from '@/components/portfolio/Navbar';
 import HeroSection from '@/components/portfolio/HeroSection';
 import AboutSection from '@/components/portfolio/AboutSection';
