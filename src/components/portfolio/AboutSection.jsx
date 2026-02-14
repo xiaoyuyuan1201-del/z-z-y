@@ -122,21 +122,21 @@ export default function AboutSection() {
               </div>
 
               {/* Basic Info */}
-              <div className="relative space-y-5 text-sm mb-8 z-10">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="group relative bg-gradient-to-br from-purple-500/10 to-purple-600/5 rounded-2xl p-4 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
-                    <div className="text-neutral-400 text-xs uppercase tracking-wider mb-2 font-light">年龄</div>
-                    <div className="text-white font-semibold text-lg">23岁</div>
-                    <div className="text-purple-300 text-xs mt-0.5">25届</div>
+              <div className="relative space-y-3 text-sm mb-8 z-10">
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="group relative bg-gradient-to-br from-purple-500/10 to-purple-600/5 rounded-xl p-3 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                    <div className="text-neutral-400 text-[10px] uppercase tracking-wider mb-1 font-light">年龄</div>
+                    <div className="text-white font-semibold text-base">23岁</div>
+                    <div className="text-purple-300 text-[10px] mt-0.5">25届</div>
                   </div>
-                  <div className="group relative bg-gradient-to-br from-purple-500/10 to-pink-500/5 rounded-2xl p-4 border border-purple-500/20 hover:border-pink-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/10">
-                    <div className="text-neutral-400 text-xs uppercase tracking-wider mb-2 font-light">学历</div>
-                    <div className="text-white font-semibold text-lg">本科</div>
+                  <div className="group relative bg-gradient-to-br from-purple-500/10 to-pink-500/5 rounded-xl p-3 border border-purple-500/20 hover:border-pink-500/40 transition-all duration-300">
+                    <div className="text-neutral-400 text-[10px] uppercase tracking-wider mb-1 font-light">学历</div>
+                    <div className="text-white font-semibold text-base">本科</div>
                   </div>
                 </div>
-                <div className="group relative bg-gradient-to-br from-purple-500/10 via-purple-600/5 to-pink-500/5 rounded-2xl p-4 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
-                  <div className="text-neutral-400 text-xs uppercase tracking-wider mb-2 font-light">专业</div>
-                  <div className="text-white font-semibold">数字媒体艺术</div>
+                <div className="group relative bg-gradient-to-br from-purple-500/10 via-purple-600/5 to-pink-500/5 rounded-xl p-3 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                  <div className="text-neutral-400 text-[10px] uppercase tracking-wider mb-1 font-light">专业</div>
+                  <div className="text-white font-semibold text-sm">数字媒体艺术</div>
                 </div>
                 
                 {/* Elegant divider */}
