@@ -94,18 +94,28 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-12 flex gap-4 justify-center">
 
-          <a
+          <motion.a
             href="#about"
-            className="px-8 py-4 bg-white text-neutral-900 text-base font-medium tracking-wide rounded-lg hover:bg-neutral-200 transition-all duration-300">
+            variants={buttonVariants}
+            initial="rest"
+            whileHover="hover"
+            onHoverStart={() => setHoveredButton('about')}
+            onHoverEnd={() => setHoveredButton(null)}
+            className="px-8 py-4 bg-white text-neutral-900 text-base font-medium tracking-wide rounded-lg hover:bg-neutral-100 transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 cursor-pointer">
 
             了解我
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="#works"
-            className="px-8 py-4 border border-neutral-700 text-neutral-300 text-base font-medium tracking-wide rounded-lg hover:border-neutral-500 hover:text-white transition-all duration-300">
+            variants={buttonVariants}
+            initial="rest"
+            whileHover="hover"
+            onHoverStart={() => setHoveredButton('works')}
+            onHoverEnd={() => setHoveredButton(null)}
+            className="px-8 py-4 border border-neutral-700 text-neutral-300 text-base font-medium tracking-wide rounded-lg hover:border-purple-400 hover:text-purple-300 transition-all duration-300 shadow-lg shadow-neutral-900/20 hover:shadow-xl hover:shadow-purple-500/20 cursor-pointer">
 
             查看作品
-          </a>
+          </motion.a>
         </motion.div>
       </div>
       
