@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import Navbar from '@/components/portfolio/Navbar';
 import HeroSection from '@/components/portfolio/HeroSection';
+import InterestsSection from '@/components/portfolio/InterestsSection';
 import AboutSection from '@/components/portfolio/AboutSection';
 import WorksSection from '@/components/portfolio/WorksSection';
 import SkillsSection from '@/components/portfolio/SkillsSection';
