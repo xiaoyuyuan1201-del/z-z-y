@@ -43,9 +43,11 @@ export default function Home() {
         {/* 右侧粉色光束 - parallax effect */}
         <motion.div 
           style={{ y: useTransform(scrollY, [0, 500], [0, 100]) }}
-          className="light-beam absolute top-0 right-1/4 translate-x-1/2 w-96 h-full bg-gradient-to-b from-pink-500/30 via-pink-400/10 to-transparent blur-3xl" 
-          style={{ animationDelay: '1s' }} 
-        />
+          className="light-beam absolute top-0 right-1/4 translate-x-1/2 w-96 h-full bg-gradient-to-b from-pink-500/30 via-pink-400/10 to-transparent blur-3xl"
+        >
+          <style>{`@keyframes lightPulseDelay { 0%, 100% { opacity: 0.6; } 50% { opacity: 0.8; } }`}</style>
+          <div className="light-beam w-full h-full" style={{ animationDelay: '1s' }} />
+        </motion.div>
         
         {/* 中心光晕 */}
         <div className="absolute inset-0 flex items-center justify-center">
