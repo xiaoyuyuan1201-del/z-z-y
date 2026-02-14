@@ -29,7 +29,7 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-16 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="text-white font-semibold text-lg tracking-wider">
           PORTFOLIO
