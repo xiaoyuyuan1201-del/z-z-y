@@ -38,16 +38,14 @@ export default function Home() {
       
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* 左侧紫色光束 - parallax effect */}
-        <div style={{ y: yParallax }} className="light-beam absolute top-0 left-1/4 -translate-x-1/2 w-96 h-full bg-gradient-to-b from-purple-500/30 via-purple-400/10 to-transparent blur-3xl" />
+        <motion.div style={{ y: yParallax }} className="light-beam absolute top-0 left-1/4 -translate-x-1/2 w-96 h-full bg-gradient-to-b from-purple-500/30 via-purple-400/10 to-transparent blur-3xl" />
         
         {/* 右侧粉色光束 - parallax effect */}
         <motion.div 
           style={{ y: useTransform(scrollY, [0, 500], [0, 100]) }}
           className="light-beam absolute top-0 right-1/4 translate-x-1/2 w-96 h-full bg-gradient-to-b from-pink-500/30 via-pink-400/10 to-transparent blur-3xl"
-        >
-          <style>{`@keyframes lightPulseDelay { 0%, 100% { opacity: 0.6; } 50% { opacity: 0.8; } }`}</style>
-          <div className="light-beam w-full h-full" style={{ animationDelay: '1s' }} />
-        </motion.div>
+          style={{ animationDelay: '1s' }} 
+        />
         
         {/* 中心光晕 */}
         <div className="absolute inset-0 flex items-center justify-center">
