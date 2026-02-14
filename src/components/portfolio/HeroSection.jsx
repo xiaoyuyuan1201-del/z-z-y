@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center relative px-6 py-20">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1a1035] via-[#2d1f4e] to-[#0f0a1f]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0514] via-[#1a0f2e] to-[#000000]" />
       
       {/* Subtle grid pattern */}
       <div 

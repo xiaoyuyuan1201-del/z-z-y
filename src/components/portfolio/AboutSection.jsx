@@ -65,7 +65,7 @@ const interests = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-32 px-6 bg-gradient-to-b from-[#1a1035] to-[#0f0a1f]">
+    <section id="about" className="py-32 px-6 bg-gradient-to-b from-[#0a0514] to-[#000000]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -95,74 +95,105 @@ export default function AboutSection() {
           >
             <div className="bg-[#0f0a1f]/80 rounded-3xl p-6 border border-purple-900/50 sticky top-8">
               {/* Avatar */}
-              <div className="relative mb-6">
-                <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600 to-pink-500">
-                  <img 
-                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698ddbdd72ba750ccf34f1a0/1c1b13e8f_image.png"
-                    alt="曾紫钰"
-                    className="w-full h-full object-cover"
-                  />
+              <div className="relative mb-8">
+                <div className="aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-purple-600 to-pink-500 p-1">
+                  <div className="w-full h-full rounded-3xl overflow-hidden">
+                    <img 
+                      src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698ddbdd72ba750ccf34f1a0/1c1b13e8f_image.png"
+                      alt="曾紫钰"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
-                {/* Skill Tags */}
-                <div className="absolute -right-2 top-8 flex flex-col gap-2">
-                  {['UX设计', '用户体验', '动效设计', '场景建模', 'AIGC'].map((skill, i) => (
-                    <span 
-                      key={skill}
-                      className="px-3 py-1 text-xs bg-purple-500/80 text-white rounded-full backdrop-blur-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+                {/* Decorative corner */}
+                <div className="absolute -top-3 -right-3 w-16 h-16 border-t-2 border-r-2 border-purple-400/30 rounded-tr-3xl" />
+                <div className="absolute -bottom-3 -left-3 w-16 h-16 border-b-2 border-l-2 border-pink-400/30 rounded-bl-3xl" />
               </div>
 
               {/* Basic Info */}
-              <div className="space-y-3 text-sm">
-                <div className="flex justify-between text-neutral-400">
-                  <span>年龄</span>
-                  <span className="text-white">23岁 / 25届</span>
+              <div className="space-y-4 text-sm mb-6">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-purple-500/5 rounded-xl p-3 border border-purple-500/10">
+                    <div className="text-neutral-500 text-xs mb-1">年龄</div>
+                    <div className="text-white font-medium">23岁 / 25届</div>
+                  </div>
+                  <div className="bg-purple-500/5 rounded-xl p-3 border border-purple-500/10">
+                    <div className="text-neutral-500 text-xs mb-1">学历</div>
+                    <div className="text-white font-medium">本科</div>
+                  </div>
                 </div>
-                <div className="flex justify-between text-neutral-400">
-                  <span>学历</span>
-                  <span className="text-white">本科</span>
+                <div className="bg-purple-500/5 rounded-xl p-3 border border-purple-500/10">
+                  <div className="text-neutral-500 text-xs mb-1">专业</div>
+                  <div className="text-white font-medium">数字媒体艺术</div>
                 </div>
-                <div className="flex justify-between text-neutral-400">
-                  <span>专业</span>
-                  <span className="text-white">数字媒体艺术</span>
-                </div>
-                <div className="border-t border-purple-900/50 my-4" />
-                <div className="flex items-center gap-2 text-neutral-400">
-                  <Phone className="w-4 h-4" />
-                  <span className="text-white">18373296050</span>
-                </div>
-                <div className="flex items-center gap-2 text-neutral-400">
-                  <Mail className="w-4 h-4" />
-                  <span className="text-white text-xs">2944905483@qq.com</span>
+                <div className="h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent my-4" />
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 text-neutral-400 group">
+                    <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
+                      <Phone className="w-4 h-4 text-purple-400" />
+                    </div>
+                    <span className="text-white text-sm">18373296050</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-neutral-400 group">
+                    <div className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
+                      <Mail className="w-4 h-4 text-purple-400" />
+                    </div>
+                    <span className="text-white text-xs">2944905483@qq.com</span>
+                  </div>
                 </div>
               </div>
 
               {/* Tools */}
-              <div className="mt-6 pt-6 border-t border-purple-900/50">
-                <p className="text-neutral-500 text-xs mb-3">熟练工具</p>
-                <div className="flex flex-wrap gap-2">
-                  {tools.map((tool) => (
-                    <span 
-                      key={tool.name}
-                      className={`px-3 py-1 text-xs text-white rounded-md ${tool.color}`}
-                    >
-                      {tool.name}
-                    </span>
-                  ))}
+              <div className="pt-6 border-t border-purple-900/30">
+                <p className="text-neutral-400 text-xs font-medium mb-4 tracking-wider">熟练工具</p>
+                <div className="grid grid-cols-3 gap-3">
+                  <div className="aspect-square rounded-xl bg-gradient-to-br from-blue-500/10 to-blue-600/5 border border-blue-500/20 flex items-center justify-center group hover:border-blue-500/40 transition-all cursor-pointer">
+                    <div className="text-center">
+                      <div className="text-2xl mb-1">🎨</div>
+                      <div className="text-[10px] text-neutral-400 group-hover:text-blue-400 transition-colors">Figma</div>
+                    </div>
+                  </div>
+                  <div className="aspect-square rounded-xl bg-gradient-to-br from-blue-600/10 to-blue-700/5 border border-blue-600/20 flex items-center justify-center group hover:border-blue-600/40 transition-all cursor-pointer">
+                    <div className="text-center">
+                      <div className="text-2xl mb-1">🖼️</div>
+                      <div className="text-[10px] text-neutral-400 group-hover:text-blue-500 transition-colors">PS</div>
+                    </div>
+                  </div>
+                  <div className="aspect-square rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-600/5 border border-orange-500/20 flex items-center justify-center group hover:border-orange-500/40 transition-all cursor-pointer">
+                    <div className="text-center">
+                      <div className="text-2xl mb-1">✏️</div>
+                      <div className="text-[10px] text-neutral-400 group-hover:text-orange-400 transition-colors">AI</div>
+                    </div>
+                  </div>
+                  <div className="aspect-square rounded-xl bg-gradient-to-br from-indigo-500/10 to-indigo-600/5 border border-indigo-500/20 flex items-center justify-center group hover:border-indigo-500/40 transition-all cursor-pointer">
+                    <div className="text-center">
+                      <div className="text-2xl mb-1">🎬</div>
+                      <div className="text-[10px] text-neutral-400 group-hover:text-indigo-400 transition-colors">AE</div>
+                    </div>
+                  </div>
+                  <div className="aspect-square rounded-xl bg-gradient-to-br from-violet-600/10 to-violet-700/5 border border-violet-600/20 flex items-center justify-center group hover:border-violet-600/40 transition-all cursor-pointer">
+                    <div className="text-center">
+                      <div className="text-2xl mb-1">🎞️</div>
+                      <div className="text-[10px] text-neutral-400 group-hover:text-violet-400 transition-colors">PR</div>
+                    </div>
+                  </div>
+                  <div className="aspect-square rounded-xl bg-gradient-to-br from-orange-400/10 to-orange-500/5 border border-orange-400/20 flex items-center justify-center group hover:border-orange-400/40 transition-all cursor-pointer">
+                    <div className="text-center">
+                      <div className="text-2xl mb-1">🧊</div>
+                      <div className="text-[10px] text-neutral-400 group-hover:text-orange-300 transition-colors">Blender</div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               {/* Resume Download */}
               <a 
                 href="#"
-                className="mt-6 w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-neutral-900 font-medium rounded-xl hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+                className="mt-6 w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium rounded-2xl hover:shadow-xl hover:shadow-purple-500/30 hover:scale-[1.02] transition-all duration-300 group relative overflow-hidden"
               >
-                <Download className="w-4 h-4" />
-                下载简历
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <Download className="w-4 h-4 relative z-10 group-hover:animate-bounce" />
+                <span className="relative z-10">下载简历</span>
               </a>
             </div>
           </motion.div>
@@ -187,7 +218,7 @@ export default function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-[#0f0a1f]/80 rounded-2xl p-6 border border-purple-900/50"
+                className="bg-[#0a0514]/90 backdrop-blur-xl rounded-2xl p-8 border border-purple-900/30 shadow-xl shadow-purple-900/10"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
@@ -228,10 +259,10 @@ export default function AboutSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="p-4 rounded-2xl bg-[#0f0a1f]/80 border border-purple-900/50 hover:border-purple-400/50 transition-colors text-center"
+                  className="p-6 rounded-2xl bg-[#0a0514]/90 backdrop-blur-xl border border-purple-900/30 hover:border-purple-400/50 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300 text-center group"
                 >
-                  <div className="w-12 h-12 mx-auto rounded-xl bg-purple-500/10 flex items-center justify-center mb-3">
-                    <Icon className="w-5 h-5 text-purple-400" />
+                  <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="w-6 h-6 text-purple-400 group-hover:text-purple-300" />
                   </div>
                   <h4 className="text-white font-medium text-sm mb-1">{skill.title}</h4>
                   <p className="text-neutral-500 text-xs">{skill.description}</p>

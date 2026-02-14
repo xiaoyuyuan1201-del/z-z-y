@@ -11,7 +11,7 @@ const socials = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-32 px-6 bg-gradient-to-b from-[#2d1f4e] to-[#1a1035] relative overflow-hidden">
+    <section id="contact" className="py-32 px-6 bg-gradient-to-b from-[#1a0f2e] to-[#0a0514] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-purple-500/10 to-transparent rounded-full blur-3xl" />
       
