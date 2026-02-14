@@ -72,31 +72,30 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           className="mt-16 grid lg:grid-cols-2 gap-16"
         >
-            {/* Tools */}
-            <div>
-              <h3 className="text-white text-xl font-semibold mb-6">技能工具</h3>
-              <div className="flex flex-wrap gap-3">
-                {tools.map((tool) => (
-                  <span
-                    key={tool}
-                    className="px-5 py-2.5 rounded-full border border-neutral-700 text-neutral-300 text-sm hover:border-purple-400 hover:text-white transition-all duration-300"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
+          {/* Tools */}
+          <div>
+            <h3 className="text-white text-xl font-semibold mb-6">技能工具</h3>
+            <div className="flex flex-wrap gap-3">
+              {tools.map((tool) => (
+                <span
+                  key={tool}
+                  className="px-5 py-2.5 rounded-full border border-neutral-700 text-neutral-300 text-sm hover:border-purple-400 hover:text-white transition-all duration-300"
+                >
+                  {tool}
+                </span>
+              ))}
             </div>
+          </div>
 
-            {/* Collaboration */}
-            <div>
-              <h3 className="text-white text-xl font-semibold mb-4">
-                开放合作 <span className="text-purple-400">+</span>
-              </h3>
-              <p className="text-neutral-400 text-base leading-relaxed">
-                目前正在寻找 UI 设计师的全职岗位。也欢迎自由项目合作，如果你对我的作品感兴趣，欢迎随时联系！
-              </p>
-            </div>
-          </motion.div>
+          {/* Collaboration */}
+          <div>
+            <h3 className="text-white text-xl font-semibold mb-4">
+              开放合作 <span className="text-purple-400">+</span>
+            </h3>
+            <p className="text-neutral-400 text-base leading-relaxed">
+              目前正在寻找 UI 设计师的全职岗位。也欢迎自由项目合作，如果你对我的作品感兴趣，欢迎随时联系！
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
