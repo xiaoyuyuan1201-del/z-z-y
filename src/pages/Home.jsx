@@ -48,6 +48,7 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
         <HeroSection />
+        <InterestSection />
         <AboutSection />
         <WorksSection projects={projects} isLoading={isLoading} />
         <SkillsSection />
