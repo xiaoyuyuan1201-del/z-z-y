@@ -214,32 +214,42 @@ export default function AboutSection() {
               <h3 className="text-3xl font-light text-white tracking-tight">工作经历</h3>
             </div>
 
-            {workExperience.map((work, index) => (
-              <motion.div
-                key={work.company}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="pb-8 mb-8 border-b border-neutral-800/50 last:border-0 last:pb-0 last:mb-0"
-              >
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
-                  <div>
-                    <h4 className="text-white text-xl font-semibold mb-2">{work.company}</h4>
-                    <span className="text-purple-300 text-sm font-medium">{work.position}</span>
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-purple-500/50 via-purple-500/30 to-transparent" />
+              
+              {workExperience.map((work, index) => (
+                <motion.div
+                  key={work.company}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="relative pl-8 pb-12 last:pb-0"
+                >
+                  {/* Timeline dot */}
+                  <div className="absolute left-0 top-0 -translate-x-1/2 w-3 h-3 rounded-full bg-purple-500 border-2 border-[#0a0514] shadow-lg shadow-purple-500/50" />
+                  
+                  {/* Period badge */}
+                  <div className="inline-block px-3 py-1 mb-4 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-medium">
+                    {work.period}
                   </div>
-                  <span className="text-neutral-400 text-sm mt-2 md:mt-0">{work.period}</span>
-                </div>
-                <ul className="space-y-3">
-                  {work.highlights.map((highlight, i) => (
-                    <li key={i} className="flex items-start gap-3 text-neutral-300 text-sm leading-relaxed">
-                      <span className="text-purple-400 mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-400 flex-shrink-0" />
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
+                  
+                  {/* Content */}
+                  <h4 className="text-white text-xl font-semibold mb-1">{work.company}</h4>
+                  <p className="text-neutral-400 text-sm mb-4">{work.position}</p>
+                  
+                  <ul className="space-y-2">
+                    {work.highlights.map((highlight, i) => (
+                      <li key={i} className="flex items-start gap-3 text-neutral-300 text-sm leading-relaxed">
+                        <span className="text-purple-400 mt-1.5 w-1 h-1 rounded-full bg-purple-400 flex-shrink-0" />
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
 
