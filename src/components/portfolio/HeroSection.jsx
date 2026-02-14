@@ -68,7 +68,8 @@ export default function HeroSection() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-8xl font-extralight text-white tracking-tight mb-6">
+          whileHover={{ scale: 1.02, letterSpacing: '0.05em' }}
+          className="text-6xl md:text-8xl font-extralight text-white tracking-tight mb-6 cursor-default">
 
           曾紫钰
         </motion.h1>
@@ -78,7 +79,8 @@ export default function HeroSection() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl text-neutral-300 font-light tracking-wide mb-4">
+          whileHover={{ scale: 1.01, color: '#c084fc' }}
+          className="text-xl md:text-2xl text-neutral-300 font-light tracking-wide mb-4 cursor-default transition-colors">
 
           UI设计师 · 2025届毕业生
         </motion.p>
@@ -88,7 +90,8 @@ export default function HeroSection() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light">
+          whileHover={{ scale: 1.01 }}
+          className="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light cursor-default transition-colors hover:text-neutral-300">
 
           专注UI设计、3D建模、动效设计与AI创作。
           热爱探索设计与技术的无限可能。
