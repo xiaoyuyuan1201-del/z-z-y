@@ -38,12 +38,16 @@ export default function HeroSection() {
       </div>
       
       
-      <div className="relative z-10 text-center max-w-4xl mx-auto">
+      <motion.div 
+        className="relative z-10 text-center max-w-4xl mx-auto"
+        style={{ y: yOffset, opacity: opacityFade }}
+      >
         {/* Avatar */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          whileHover={{ scale: 1.08, rotate: 2 }}
           className="mb-8 group">
 
           <div className="relative w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-purple-400 to-pink-500 p-[2px] overflow-hidden">
