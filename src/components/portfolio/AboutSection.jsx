@@ -298,13 +298,23 @@ export default function AboutSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="p-6 rounded-2xl bg-[#0a0514]/90 backdrop-blur-xl border border-purple-900/30 hover:border-purple-400/50 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300 text-center group"
+                  className="relative group"
                 >
-                  <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-6 h-6 text-purple-400 group-hover:text-purple-300" />
+                  {/* Glow effect */}
+                  <div className="absolute -inset-0.5 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500" />
+                  
+                  <div className="relative p-6 rounded-2xl bg-gradient-to-br from-[#0f0a1f]/90 to-[#1a0f2e]/80 backdrop-blur-xl border border-purple-500/30 group-hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-500 text-center h-full">
+                    {/* Background decoration */}
+                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-purple-500/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    <div className="relative z-10">
+                      <div className="w-16 h-16 mx-auto rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                        <Icon className="w-7 h-7 text-purple-400 group-hover:text-purple-300 transition-colors" />
+                      </div>
+                      <h4 className="text-white font-semibold text-sm mb-2 group-hover:text-purple-200 transition-colors">{skill.title}</h4>
+                      <p className="text-neutral-400 text-xs leading-relaxed group-hover:text-neutral-300 transition-colors">{skill.description}</p>
+                    </div>
                   </div>
-                  <h4 className="text-white font-medium text-sm mb-1">{skill.title}</h4>
-                  <p className="text-neutral-500 text-xs">{skill.description}</p>
                 </motion.div>
               );
             })}
