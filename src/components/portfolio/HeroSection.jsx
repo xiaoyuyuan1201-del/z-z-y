@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import Prism from './Prism';
 
@@ -61,7 +61,8 @@ export default function HeroSection() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-8xl font-extralight text-white tracking-tight mb-6">
+          whileHover={{ letterSpacing: '0.05em', scale: 1.02 }}
+          className="text-6xl md:text-8xl font-extralight text-white tracking-tight mb-6 cursor-pointer transition-all">
 
           曾紫钰
         </motion.h1>
@@ -124,13 +125,14 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.2 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2">
+        whileHover={{ scale: 1.2 }}
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 cursor-pointer">
 
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}>
 
-          <ArrowDown className="w-5 h-5 text-neutral-600" />
+          <ArrowDown className="w-5 h-5 text-neutral-600 hover:text-neutral-400 transition-colors" />
         </motion.div>
       </motion.div>
     </section>);
