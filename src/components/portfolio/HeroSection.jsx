@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center relative px-16 py-20">
       {/* 3D Prism Background */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden w-full h-full">
         <Prism
           animationType="rotate"
           timeScale={0.3}
