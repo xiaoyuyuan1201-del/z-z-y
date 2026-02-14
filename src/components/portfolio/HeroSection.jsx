@@ -143,6 +143,8 @@ export default function HeroSection() {
           <ArrowDown className="w-5 h-5 text-neutral-600" />
         </motion.div>
       </motion.div>
-    </section>);
+      </motion.div>
+    </section>
+  );
 
 }
