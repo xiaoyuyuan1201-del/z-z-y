@@ -98,9 +98,9 @@ export default function AboutSection() {
               <div className="relative mb-6">
                 <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-purple-600 to-pink-500">
                   <img 
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80"
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698ddbdd72ba750ccf34f1a0/9a25aaf68_2.png"
                     alt="曾紫钰"
-                    className="w-full h-full object-cover mix-blend-overlay opacity-80"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 {/* Skill Tags */}
