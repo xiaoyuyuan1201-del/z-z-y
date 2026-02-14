@@ -4,6 +4,18 @@ import { ArrowDown } from 'lucide-react';
 import Prism from './Prism';
 
 export default function HeroSection() {
+  const [hoveredButton, setHoveredButton] = useState(null);
+
+  const buttonVariants = {
+    rest: { scale: 1, y: 0 },
+    hover: { scale: 1.05, y: -2 }
+  };
+
+  const textVariants = {
+    rest: { opacity: 1, letterSpacing: '0em' },
+    hover: { opacity: 0.9, letterSpacing: '0.05em' }
+  };
+
   return (
     <section className="min-h-screen flex flex-col justify-center items-center relative px-16 py-20">
       {/* 3D Prism Background */}
