@@ -1,35 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import Prism from './Prism';
 
 export default function HeroSection() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center relative px-16 py-20">
-      {/* Dynamic Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0514] via-[#1a0f2e] to-[#0a0514] relative overflow-hidden">
-        <motion.div
-          initial={{ x: '-50%', y: '-50%' }}
-          animate={{ x: ['-50%', '0%', '-50%'], y: ['-50%', '50%', '-50%'] }}
-          transition={{
-            duration: 12,
-            ease: 'linear',
-            repeat: Infinity,
-            repeatType: 'reverse',
-          }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-40"
-        />
-        <motion.div
-          initial={{ x: '50%', y: '50%' }}
-          animate={{ x: ['50%', '0%', '50%'], y: ['50%', '-50%', '50%'] }}
-          transition={{
-            duration: 15,
-            ease: 'linear',
-            repeat: Infinity,
-            repeatType: 'reverse',
-          }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-40"
+      {/* 3D Prism Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <Prism
+          animationType="rotate"
+          timeScale={0.3}
+          height={3.9}
+          baseWidth={5.5}
+          scale={3.6}
+          hueShift={0}
+          colorFrequency={1}
+          noise={0}
+          glow={0.9}
         />
       </div>
+      
+      {/* Overlay gradient for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0514]/80 via-[#1a0f2e]/80 to-[#0a0514]/80" />
       
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         {/* Avatar */}
