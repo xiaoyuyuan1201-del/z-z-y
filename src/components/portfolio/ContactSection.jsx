@@ -11,7 +11,7 @@ const socials = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-32 px-6 bg-gradient-to-b from-[#1a0f2e] to-[#0a0612] relative overflow-hidden">
+    <section id="contact" className="py-32 px-6 bg-gradient-to-b from-[#2d1f4e] to-[#1a1035] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-purple-500/10 to-transparent rounded-full blur-3xl" />
       
@@ -41,7 +41,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-[#0a0612]/90 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-purple-500/10 shadow-2xl shadow-purple-500/10"
+          className="bg-[#0f0a1f]/80 rounded-3xl p-8 md:p-12 border border-purple-900/50"
         >
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Email */}
@@ -95,7 +95,7 @@ export default function ContactSection() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full border border-purple-500/20 flex items-center justify-center text-neutral-500 hover:text-white hover:border-purple-400/50 hover:bg-purple-500/10 transition-all duration-300"
+                  className="w-12 h-12 rounded-full border border-purple-900/50 flex items-center justify-center text-neutral-500 hover:text-white hover:border-purple-500/50 transition-all duration-300"
                   aria-label={social.label}
                 >
                   <Icon className="w-5 h-5" />
