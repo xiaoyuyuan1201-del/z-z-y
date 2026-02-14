@@ -334,7 +334,7 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center"
+          className="text-center mb-32"
         >
           <h3 className="text-2xl font-light text-white mb-8">兴趣爱好</h3>
           <div className="flex flex-wrap justify-center gap-3">
@@ -350,6 +350,80 @@ export default function AboutSection() {
                 {interest}
               </motion.span>
             ))}
+          </div>
+        </motion.div>
+
+        {/* Final Introduction */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="grid lg:grid-cols-2 gap-16 items-start"
+        >
+          {/* Left - Introduction */}
+          <div>
+            <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-6">
+              关于我
+            </p>
+            <h2 className="text-4xl md:text-5xl font-light text-white mb-8 leading-tight">
+              你好，很高兴认识你
+            </h2>
+            
+            <div className="space-y-6 text-neutral-300 leading-relaxed">
+              <p>
+                2025届毕业生，热爱UI设计与数字创意。在校期间深入学习了用户界面设计、三维建模、动效制作等技能，并积极探索AI在设计领域的应用。
+              </p>
+              <p>
+                我相信优秀的设计不仅是视觉的美观，更是能够解决问题、传递情感、创造价值的工具。期待与你一起创造有意义的数字体验。
+              </p>
+            </div>
+
+            <div className="mt-10 space-y-4">
+              <a 
+                href="mailto:hello@designer.com"
+                className="flex items-center gap-3 text-neutral-300 hover:text-purple-400 transition-colors group"
+              >
+                <Mail className="w-5 h-5" />
+                <span className="text-sm">hello@designer.com</span>
+              </a>
+              <div className="flex items-center gap-3 text-neutral-300">
+                <MapPin className="w-5 h-5" />
+                <span className="text-sm">中国 · 深圳</span>
+              </div>
+              <a 
+                href="#"
+                target="_blank"
+                className="flex items-center gap-3 text-neutral-300 hover:text-purple-400 transition-colors"
+              >
+                <span className="text-sm">Behance / Dribbble / 站酷</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Right - Skills & Collaboration */}
+          <div className="space-y-10">
+            <div>
+              <h4 className="text-white text-lg font-medium mb-6">技能工具</h4>
+              <div className="flex flex-wrap gap-3">
+                {['Figma', 'Sketch', 'Adobe XD', 'Photoshop', 'Illustrator', 'After Effects', 'Blender', 'Midjourney', 'Stable Diffusion', 'Framer'].map((tool) => (
+                  <span
+                    key={tool}
+                    className="px-5 py-2.5 rounded-full bg-neutral-800/50 border border-neutral-700/50 text-neutral-300 text-sm hover:border-purple-400/50 hover:text-white transition-all duration-300"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative bg-gradient-to-br from-purple-500/10 to-pink-500/5 rounded-2xl p-8 border border-purple-500/30">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl" />
+              <h4 className="text-white text-lg font-medium mb-4 relative z-10">开放合作 ✦</h4>
+              <p className="text-neutral-300 text-sm leading-relaxed relative z-10">
+                目前正在寻找UI设计师的全职岗位。也欢迎各类项目合作，如果你对我的作品感兴趣，欢迎随时联系！
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>
