@@ -17,7 +17,7 @@ export default function Home() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0f0a1f] via-[#1a0f2e] to-[#0f0a1f] relative overflow-hidden">
+    <div className="min-h-screen bg-[#06042D] relative overflow-hidden">
       {/* 舞台灯光背景效果 */}
       <style>{`
         @keyframes lightPulse {
