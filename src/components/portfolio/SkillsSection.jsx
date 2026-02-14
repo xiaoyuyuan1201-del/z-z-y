@@ -43,8 +43,9 @@ const skills = [
 
 export default function SkillsSection() {
   return (
-    <section className="py-32 px-6 bg-gradient-to-b from-[#1a1035] to-[#2d1f4e]">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-32 px-6 bg-gradient-to-b from-[#0a0612] to-[#1a0f2e] relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/5 via-transparent to-transparent" />
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -72,7 +73,7 @@ export default function SkillsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group p-8 rounded-2xl bg-[#0f0a1f]/80 border border-purple-900/50 hover:border-purple-500/50 transition-all duration-500"
+                className="group p-8 rounded-2xl bg-[#0a0612]/80 backdrop-blur-xl border border-purple-500/10 hover:border-purple-400/30 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-500"
               >
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                   <Icon className="w-6 h-6 text-purple-400" />
