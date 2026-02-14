@@ -28,8 +28,8 @@ export default function Home() {
       {/* 舞台灯光背景效果 */}
       <style>{`
         @keyframes lightPulse {
-          0%, 100% { opacity: 0.6; }
-          50% { opacity: 0.8; }
+          0%, 100% { opacity: 0.2; }
+          50% { opacity: 0.4; }
         }
         .light-beam {
           animation: lightPulse 4s ease-in-out infinite;
