@@ -73,6 +73,12 @@ export default function WorksSection({ projects, isLoading }) {
             <p className="text-neutral-500 font-light">暂无作品</p>
           </div>
         )}
+
+        <ProjectModal 
+          project={selectedProject} 
+          isOpen={!!selectedProject} 
+          onClose={() => setSelectedProject(null)} 
+        />
       </div>
     </section>
   );
