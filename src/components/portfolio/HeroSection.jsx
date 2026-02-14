@@ -1,52 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Sparkles } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import Prism from './Prism';
 
 export default function HeroSection() {
-  const [currentPreset, setCurrentPreset] = useState(0);
-
-  const presets = [
-    { name: '青蓝渐变', hueShift: 3.5, glow: 3.5, bloom: 2.5 },
-    { name: '紫粉梦幻', hueShift: 0, glow: 2, bloom: 1.5 },
-    { name: '橙红热情', hueShift: 5.5, glow: 3, bloom: 2 },
-  ];
-
-  const handleBackgroundClick = () => {
-    setCurrentPreset((prev) => (prev + 1) % presets.length);
-  };
-
-  const preset = presets[currentPreset];
-
   return (
     <section className="min-h-screen flex flex-col justify-center items-center relative px-16 py-20">
       {/* 3D Prism Background */}
-      <div 
-        className="absolute inset-0 overflow-hidden w-full h-full cursor-pointer group"
-        onClick={handleBackgroundClick}
-      >
+      <div className="absolute inset-0 overflow-hidden w-full h-full">
         <Prism
-          animationType="hover"
-          timeScale={0.3}
+          animationType="rotate"
+          timeScale={0.5}
           height={2.5}
-          baseWidth={6.5}
-          scale={3.5}
-          hueShift={preset.hueShift}
-          colorFrequency={0.8}
-          noise={0.1}
-          glow={preset.glow}
-          bloom={preset.bloom}
+          baseWidth={5.5}
+          scale={2.8}
+          hueShift={0}
+          colorFrequency={1}
+          noise={0}
+          glow={2}
+          bloom={1.5}
         />
-        {/* Click hint */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-          className="absolute bottom-8 right-8 flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <Sparkles className="w-4 h-4 text-purple-300" />
-          <span className="text-sm text-purple-200">点击切换背景</span>
-        </motion.div>
       </div>
       
       {/* Overlay gradient for text readability */}
