@@ -15,52 +15,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-black/40" />
       </div>
       
-      <div className="relative z-10 text-center max-w-4xl mx-auto">
-        {/* Avatar */}
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-8"
-        >
-          <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-purple-400 to-pink-500 p-[2px]">
-            <div className="w-full h-full rounded-full bg-[#1a1035] flex items-center justify-center">
-              <span className="text-4xl font-light text-white">曾</span>
-            </div>
-          </div>
-        </motion.div>
-        
-        {/* Name */}
-        <motion.h1
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-extralight text-white tracking-tight mb-6"
-        >
-          曾紫钰
-        </motion.h1>
-        
-        {/* Title */}
-        <motion.p
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-neutral-400 font-light tracking-wide mb-4"
-        >
-          UI设计师 · 2025届毕业生
-        </motion.p>
-        
-        {/* Bio */}
-        <motion.p
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-neutral-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-light"
-        >
-          专注UI设计、3D建模、动效设计与AI创作。
-          热爱探索设计与技术的无限可能。
-        </motion.p>
-        
+      <div className="relative z-10 text-center max-w-4xl mx-auto mt-32">
         {/* CTA */}
         <motion.div
           initial={{ y: 30, opacity: 0 }}
@@ -70,13 +25,13 @@ export default function HeroSection() {
         >
           <a 
             href="#about"
-            className="px-8 py-3 bg-white text-neutral-900 text-sm font-medium tracking-wide rounded-full hover:bg-neutral-200 transition-all duration-300"
+            className="px-8 py-3 bg-white/90 text-neutral-900 text-sm font-medium tracking-wide rounded-full hover:bg-white transition-all duration-300 backdrop-blur-sm"
           >
             了解我
           </a>
           <a 
             href="#works"
-            className="px-8 py-3 border border-neutral-700 text-neutral-300 text-sm font-medium tracking-wide rounded-full hover:border-neutral-500 hover:text-white transition-all duration-300"
+            className="px-8 py-3 border border-white/30 text-white text-sm font-medium tracking-wide rounded-full hover:border-white/60 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
           >
             查看作品
           </a>
