@@ -38,22 +38,22 @@ export default function Home() {
       
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* 左侧紫色光束 - parallax effect */}
-        <motion.div style={{ y: yParallax }} className="light-beam absolute top-0 left-1/4 -translate-x-1/2 w-96 h-full bg-gradient-to-b from-purple-500/30 via-purple-400/10 to-transparent blur-3xl" />
+        <motion.div style={{ y: yParallax }} className="light-beam absolute top-0 left-1/4 -translate-x-1/2 w-96 h-full bg-gradient-to-b from-purple-500/50 via-purple-400/30 to-transparent blur-3xl" />
         
         {/* 右侧粉色光束 - parallax effect */}
         <motion.div 
           style={{ y: useTransform(scrollY, [0, 500], [0, 100]) }}
-          className="light-beam absolute top-0 right-1/4 translate-x-1/2 w-96 h-full bg-gradient-to-b from-pink-500/30 via-pink-400/10 to-transparent blur-3xl"
+          className="light-beam absolute top-0 right-1/4 translate-x-1/2 w-96 h-full bg-gradient-to-b from-pink-500/50 via-pink-400/30 to-transparent blur-3xl"
           style={{ animationDelay: '1s' }} 
         />
         
         {/* 中心光晕 */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="light-beam w-full h-96 bg-gradient-radial from-purple-500/20 via-transparent to-transparent blur-3xl" style={{ animationDelay: '2s' }} />
+          <div className="light-beam w-full h-96 bg-gradient-radial from-purple-500/40 via-transparent to-transparent blur-3xl" style={{ animationDelay: '2s' }} />
         </div>
         
         {/* 地面光线强化 */}
-        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-purple-600/10 via-transparent to-transparent blur-2xl" />
+        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-purple-600/30 via-transparent to-transparent blur-2xl" />
       </div>
       <div className="relative z-10">
         <Navbar />
