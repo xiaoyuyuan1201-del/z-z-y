@@ -27,11 +27,12 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
       <HeroSection />
-      <AboutSection />
-      <WorksSection projects={projects} isLoading={isLoading} />
-      <SkillsSection />
-      <ContactSection />
-      <Footer />
+        <AboutSection />
+        <WorksSection projects={projects} isLoading={isLoading} />
+        <SkillsSection />
+        <ContactSection />
+        <Footer />
+      </div>
     </div>
   );
 }
