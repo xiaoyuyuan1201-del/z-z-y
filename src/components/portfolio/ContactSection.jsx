@@ -25,7 +25,7 @@ export default function ContactSection() {
             </p>
             
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-12 leading-tight">
-              你好，很高兴认识你
+              让我们一起创造更多可能
             </h2>
             
             <p className="text-neutral-400 text-base leading-relaxed mb-8">
