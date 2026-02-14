@@ -13,11 +13,12 @@ export default function HeroSection() {
           timeScale={0.5}
           height={3.5}
           baseWidth={5.5}
-          scale={3.6}
+          scale={2.8}
           hueShift={0}
           colorFrequency={1}
           noise={0}
-          glow={1}
+          glow={2}
+          bloom={1.5}
         />
       </div>
       
