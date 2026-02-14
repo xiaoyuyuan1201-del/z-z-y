@@ -86,7 +86,7 @@ export default function ContactSection() {
           </div>
           
           {/* Social Links */}
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4 mb-12">
             {socials.map((social) => {
               const Icon = social.icon;
               return (
@@ -102,6 +102,32 @@ export default function ContactSection() {
                 </a>
               );
             })}
+          </div>
+          
+          {/* QR Codes */}
+          <div className="border-t border-purple-500/20 pt-12">
+            <h3 className="text-white text-xl font-light text-center mb-8">扫码联系我</h3>
+            <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+              {[
+                { title: '微信', image: '/qr-wechat.png' },
+                { title: 'QQ', image: '/qr-qq.png' },
+                { title: '小红书', image: '/qr-xiaohongshu.png' }
+              ].map((qr) => (
+                <div key={qr.title} className="group">
+                  <div className="relative">
+                    <div className="absolute -inset-1 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500" />
+                    <div className="relative bg-white rounded-2xl p-4 overflow-hidden">
+                      <img 
+                        src={qr.image} 
+                        alt={qr.title}
+                        className="w-full aspect-square object-cover"
+                      />
+                    </div>
+                  </div>
+                  <p className="text-center text-neutral-400 text-sm font-light mt-4">{qr.title}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>
