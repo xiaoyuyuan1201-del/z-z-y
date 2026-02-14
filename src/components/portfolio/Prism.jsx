@@ -63,14 +63,14 @@ const Prism = ({
     });
     container.appendChild(gl.canvas);
 
-    const vertex = /* glsl */ `
+    const vertex = /* glsl */`
       attribute vec2 position;
       void main() {
         gl_Position = vec4(position, 0.0, 1.0);
       }
     `;
 
-    const fragment = /* glsl */ `
+    const fragment = /* glsl */`
       precision highp float;
 
       uniform vec2  iResolution;
@@ -295,7 +295,7 @@ const Prism = ({
     const lerp = (a, b, t) => a + (b - a) * t;
 
     const pointer = { x: 0, y: 0, inside: true };
-    const onMove = e => {
+    const onMove = (e) => {
       const ww = Math.max(1, window.innerWidth);
       const wh = Math.max(1, window.innerHeight);
       const cx = ww * 0.5;
@@ -315,7 +315,7 @@ const Prism = ({
 
     let onPointerMove = null;
     if (animationType === 'hover') {
-      onPointerMove = e => {
+      onPointerMove = (e) => {
         onMove(e);
         startRAF();
       };
@@ -329,7 +329,7 @@ const Prism = ({
       program.uniforms.uUseBaseWobble.value = 1;
     }
 
-    const render = t => {
+    const render = (t) => {
       const time = (t - t0) * 0.001;
       program.uniforms.iTime.value = time;
 
@@ -350,7 +350,7 @@ const Prism = ({
 
         if (NOISE_IS_ZERO) {
           const settled =
-            Math.abs(yaw - targetYaw) < 1e-4 && Math.abs(pitch - targetPitch) < 1e-4 && Math.abs(roll) < 1e-4;
+          Math.abs(yaw - targetYaw) < 1e-4 && Math.abs(pitch - targetPitch) < 1e-4 && Math.abs(roll) < 1e-4;
           if (settled) continueRAF = false;
         }
       } else if (animationType === '3drotate') {
@@ -383,10 +383,10 @@ const Prism = ({
     };
 
     if (suspendWhenOffscreen) {
-      const io = new IntersectionObserver(entries => {
-        const vis = entries.some(e => e.isIntersecting);
-        if (vis) startRAF();
-        else stopRAF();
+      const io = new IntersectionObserver((entries) => {
+        const vis = entries.some((e) => e.isIntersecting);
+        if (vis) startRAF();else
+        stopRAF();
       });
       io.observe(container);
       startRAF();
@@ -411,25 +411,25 @@ const Prism = ({
       if (gl.canvas.parentElement === container) container.removeChild(gl.canvas);
     };
   }, [
-    height,
-    baseWidth,
-    animationType,
-    glow,
-    noise,
-    offset?.x,
-    offset?.y,
-    scale,
-    transparent,
-    hueShift,
-    colorFrequency,
-    timeScale,
-    hoverStrength,
-    inertia,
-    bloom,
-    suspendWhenOffscreen
-  ]);
+  height,
+  baseWidth,
+  animationType,
+  glow,
+  noise,
+  offset?.x,
+  offset?.y,
+  scale,
+  transparent,
+  hueShift,
+  colorFrequency,
+  timeScale,
+  hoverStrength,
+  inertia,
+  bloom,
+  suspendWhenOffscreen]
+  );
 
-  return <div className="w-full h-full relative" ref={containerRef} />;
+  return <div className="w-full h-full relative blow" ref={containerRef} />;
 };
 
 export default Prism;
