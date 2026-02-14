@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, ArrowUpRight, Play, X } from 'lucide-react';
 
-export default function ProjectCard({ project, index }) {
+export default function ProjectCard({ project, index, onOpenModal }) {
   const [showVideo, setShowVideo] = useState(false);
   const hasVideo = project.video_url;
   
@@ -13,7 +13,8 @@ export default function ProjectCard({ project, index }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, delay: index * 0.1 }}
-        className="group relative"
+        className="group relative cursor-pointer"
+        onClick={() => onOpenModal(project)}
       >
         <div className="relative overflow-hidden rounded-2xl bg-neutral-900 aspect-[4/3]">
           {/* Image */}
