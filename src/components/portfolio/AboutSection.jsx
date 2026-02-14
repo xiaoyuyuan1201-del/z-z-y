@@ -250,6 +250,39 @@ export default function AboutSection() {
                 </motion.div>
               ))}
             </div>
+
+            {/* QR Codes */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mt-12 grid grid-cols-3 gap-6"
+            >
+              {[
+                { title: '微信', image: '/qr-wechat.png' },
+                { title: 'QQ', image: '/qr-qq.png' },
+                { title: '小红书', image: '/qr-xiaohongshu.png' }
+              ].map((qr, index) => (
+                <div 
+                  key={qr.title}
+                  className="relative group"
+                >
+                  <div className="absolute -inset-0.5 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500" />
+                  
+                  <div className="relative bg-gradient-to-br from-[#0f0a1f]/90 to-[#1a0f2e]/80 backdrop-blur-xl rounded-2xl p-6 border border-purple-500/30 group-hover:border-purple-400/50 transition-all duration-500">
+                    <div className="aspect-square bg-white rounded-xl mb-4 overflow-hidden">
+                      <img 
+                        src={qr.image} 
+                        alt={qr.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-center text-white text-sm font-medium">{qr.title}</p>
+                  </div>
+                </div>
+              ))}
+            </motion.div>
           </motion.div>
         </div>
 
