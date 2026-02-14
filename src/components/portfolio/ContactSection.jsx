@@ -1,109 +1,100 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, Github, Twitter, Linkedin, Instagram, ArrowUpRight } from 'lucide-react';
+import { Mail, MapPin, ExternalLink } from 'lucide-react';
 
-const socials = [
-  { icon: Github, label: 'GitHub', href: '#' },
-  { icon: Twitter, label: 'Twitter', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
-  { icon: Instagram, label: 'Instagram', href: '#' },
+const tools = [
+  'Figma', 'Sketch', 'Adobe XD', 'Photoshop',
+  'Illustrator', 'After Effects', 'Blender', 'Midjourney',
+  'Stable Diffusion', 'Framer'
 ];
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-32 px-6 bg-gradient-to-b from-[#1a0f2e] to-[#0a0514] relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-purple-500/10 to-transparent rounded-full blur-3xl" />
-      
-      <div className="max-w-4xl mx-auto relative z-10">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-4">
-            联系
-          </p>
-          <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight mb-6">
-            一起创造精彩
-          </h2>
-          <p className="text-neutral-500 font-light max-w-xl mx-auto">
-            无论是项目合作、工作机会还是只是想聊聊，都欢迎与我联系。
-          </p>
-        </motion.div>
-        
-        {/* Contact Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-[#0f0a1f]/80 rounded-3xl p-8 md:p-12 border border-purple-900/50"
-        >
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Email */}
-            <a 
-              href="mailto:hello@example.com"
-              className="group flex items-start gap-4 p-4 rounded-2xl hover:bg-neutral-800/50 transition-colors"
-            >
-              <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center flex-shrink-0">
-                <Mail className="w-5 h-5 text-purple-400" />
-              </div>
-              <div>
-                <p className="text-neutral-500 text-sm mb-1">邮箱</p>
-                <p className="text-white font-light group-hover:text-purple-400 transition-colors">
-                  hello@example.com
-                </p>
-              </div>
-            </a>
+    <section id="contact" className="py-32 px-6 bg-[#000000]">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16">
+          {/* Left Column */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-6">
+              关于我
+            </p>
             
-            {/* Location */}
-            <div className="flex items-start gap-4 p-4">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-5 h-5 text-purple-400" />
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-12 leading-tight">
+              你好，很高兴认识你
+            </h2>
+            
+            <p className="text-neutral-400 text-base leading-relaxed mb-8">
+              2025届毕业生，热爱 UI 设计与数字创意。在校期间深入学习了用户界面设计、三维建模、动效制作等技能，并积极探索 AI 在设计领域的应用。
+            </p>
+            
+            <p className="text-neutral-400 text-base leading-relaxed mb-12">
+              我相信优秀的设计不仅仅是视觉上的美观，更是能够解决决问题、传递情感、创造价值的工具。期待与你一起创造有意义的数字体验。
+            </p>
+            
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <a 
+                href="mailto:hello@designer.com"
+                className="flex items-center gap-3 text-neutral-300 hover:text-purple-400 transition-colors group"
+              >
+                <Mail className="w-5 h-5" />
+                <span>hello@designer.com</span>
+              </a>
+              
+              <div className="flex items-center gap-3 text-neutral-300">
+                <MapPin className="w-5 h-5" />
+                <span>中国 · 深圳</span>
               </div>
-              <div>
-                <p className="text-neutral-500 text-sm mb-1">位置</p>
-                <p className="text-white font-light">
-                  中国 · 北京
-                </p>
+              
+              <a 
+                href="#"
+                className="flex items-center gap-3 text-neutral-300 hover:text-purple-400 transition-colors group"
+              >
+                <ExternalLink className="w-5 h-5" />
+                <span>Behance / Dribbble / 站酷</span>
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Right Column */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-12"
+          >
+            {/* Tools */}
+            <div>
+              <h3 className="text-white text-xl font-semibold mb-6">技能工具</h3>
+              <div className="flex flex-wrap gap-3">
+                {tools.map((tool) => (
+                  <span
+                    key={tool}
+                    className="px-5 py-2.5 rounded-full border border-neutral-700 text-neutral-300 text-sm hover:border-purple-400 hover:text-white transition-all duration-300"
+                  >
+                    {tool}
+                  </span>
+                ))}
               </div>
             </div>
-          </div>
-          
-          {/* CTA Button */}
-          <div className="text-center mb-12">
-            <a 
-              href="mailto:hello@example.com"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-neutral-900 font-medium rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
-            >
-              发送邮件
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
-          </div>
-          
-          {/* Social Links */}
-          <div className="flex justify-center gap-4">
-            {socials.map((social) => {
-              const Icon = social.icon;
-              return (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full border border-purple-900/50 flex items-center justify-center text-neutral-500 hover:text-white hover:border-purple-500/50 transition-all duration-300"
-                  aria-label={social.label}
-                >
-                  <Icon className="w-5 h-5" />
-                </a>
-              );
-            })}
-          </div>
-        </motion.div>
+
+            {/* Collaboration */}
+            <div>
+              <h3 className="text-white text-xl font-semibold mb-4">
+                开放合作 <span className="text-purple-400">+</span>
+              </h3>
+              <p className="text-neutral-400 text-base leading-relaxed">
+                目前正在寻找 UI 设计师的全职岗位。也欢迎自由项目合作，如果你对我的作品感兴趣，欢迎随时联系！
+              </p>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
