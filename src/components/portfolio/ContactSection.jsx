@@ -55,7 +55,7 @@ export default function ContactSection() {
               
               <a 
                 href="#"
-                className="flex items-center gap-3 text-neutral-300 hover:text-purple-400 transition-colors group"
+                className="flex items-center gap-3 text-purple-300 hover:text-purple-400 transition-colors group"
               >
                 <ExternalLink className="w-5 h-5" />
                 <span>Behance / Dribbble / 站酷</span>
@@ -78,7 +78,7 @@ export default function ContactSection() {
                 {tools.map((tool) => (
                   <span
                     key={tool}
-                    className="px-5 py-2.5 rounded-full border border-neutral-700 text-neutral-300 text-sm hover:border-purple-400 hover:text-white transition-all duration-300"
+                    className="px-5 py-2.5 rounded-full border border-purple-900/50 text-neutral-300 text-sm hover:border-purple-400 hover:text-white hover:bg-purple-500/10 transition-all duration-300"
                   >
                     {tool}
                   </span>

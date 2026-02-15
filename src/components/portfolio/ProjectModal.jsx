@@ -43,7 +43,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   />
                   {project.featured && (
                     <div className="absolute top-4 left-4">
-                      <span className="px-4 py-2 bg-amber-500/90 backdrop-blur-sm text-neutral-900 text-sm font-medium rounded-full">
+                      <span className="px-4 py-2 bg-purple-500/90 backdrop-blur-sm text-white text-sm font-medium rounded-full">
                         精选项目
                       </span>
                     </div>
