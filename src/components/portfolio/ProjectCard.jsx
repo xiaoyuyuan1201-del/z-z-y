@@ -51,7 +51,7 @@ export default function ProjectCard({ project, index, onOpenModal }) {
         <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
           <div className="flex items-start justify-between">
             <div>
-              <p className="text-amber-400 text-xs font-medium tracking-wider uppercase mb-2">
+              <p className="text-purple-400 text-xs font-medium tracking-wider uppercase mb-2">
                 {project.category || '项目'}
               </p>
               <h3 className="text-white text-xl font-light mb-2">
@@ -86,7 +86,7 @@ export default function ProjectCard({ project, index, onOpenModal }) {
         {/* Featured badge */}
         {project.featured && (
           <div className="absolute top-4 left-4">
-            <span className="px-3 py-1 bg-amber-500/90 backdrop-blur-sm text-neutral-900 text-xs font-medium rounded-full">
+            <span className="px-3 py-1 bg-purple-500/90 backdrop-blur-sm text-white text-xs font-medium rounded-full">
               精选
             </span>
           </div>
