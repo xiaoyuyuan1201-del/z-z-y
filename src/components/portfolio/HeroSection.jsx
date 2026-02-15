@@ -22,7 +22,7 @@ export default function HeroSection() {
   return (
     <section className="flex flex-col justify-center items-center relative px-16 py-20" style={{ minHeight: 'calc(100vh - 100px)' }}>
       {/* 3D Prism Background */}
-      <div className="absolute inset-0 overflow-hidden w-full h-full bg-gradient-to-b from-[#0a0514] to-[#000000]">
+      <div className="absolute inset-0 overflow-hidden w-full h-full bg-gradient-to-b from-[#0a1628] to-[#001a33]">
         <Prism
           animationType="rotate"
           timeScale={0.5}

@@ -24,7 +24,7 @@ export default function Home() {
   });
 
   return (
-    <div className="min-h-screen bg-[#06042D] relative overflow-hidden" ref={containerRef}>
+    <div className="min-h-screen bg-[#000d1a] relative overflow-hidden" ref={containerRef}>
       {/* 舞台灯光背景效果 */}
       <style>{`
         @keyframes lightPulse {
