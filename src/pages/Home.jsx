@@ -40,21 +40,21 @@ export default function Home() {
         {/* 左上方青色光束 - spotlight effect */}
         <motion.div 
           style={{ y: yParallax }} 
-          className="light-beam absolute -top-20 left-[15%] w-[500px] h-[120%] bg-gradient-to-b from-cyan-300/60 via-cyan-400/30 to-transparent blur-3xl rotate-12" 
+          className="light-beam absolute -top-20 left-[15%] w-[500px] h-[120%] bg-gradient-to-b from-cyan-300/[0.12] via-cyan-400/[0.06] to-transparent blur-3xl rotate-12" 
         />
         
         {/* 右上方青色光束 - spotlight effect */}
         <motion.div 
           style={{ y: useTransform(scrollY, [0, 500], [0, 100]) }}
-          className="light-beam absolute -top-20 right-[15%] w-[500px] h-[120%] bg-gradient-to-b from-cyan-300/60 via-cyan-400/30 to-transparent blur-3xl -rotate-12"
+          className="light-beam absolute -top-20 right-[15%] w-[500px] h-[120%] bg-gradient-to-b from-cyan-300/[0.12] via-cyan-400/[0.06] to-transparent blur-3xl -rotate-12"
           style={{ animationDelay: '1s' }} 
         />
         
         {/* 底部中心强烈白色光辉 - stage glow */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-radial from-white/80 via-cyan-200/60 to-transparent blur-3xl" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-radial from-white/[0.16] via-cyan-200/[0.12] to-transparent blur-3xl" />
         
         {/* 底部扩散光 - platform glow */}
-        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-cyan-400/40 via-cyan-300/20 to-transparent blur-2xl" />
+        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-cyan-400/[0.08] via-cyan-300/[0.04] to-transparent blur-2xl" />
       </div>
       <div className="relative z-10">
         <Navbar />
