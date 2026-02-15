@@ -75,7 +75,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20">
 
-          <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-4">
+          <p className="text-cyan-400 text-sm font-medium tracking-widest uppercase mb-4">
             关于我
           </p>
           <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight">
