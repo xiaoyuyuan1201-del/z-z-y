@@ -429,7 +429,7 @@ const Prism = ({
   suspendWhenOffscreen]
   );
 
-  return <div className="bg-[#0c0132] w-full h-full relative blow" ref={containerRef} />;
+  return <div className="w-full h-full relative blow" ref={containerRef} />;
 };
 
 export default Prism;
