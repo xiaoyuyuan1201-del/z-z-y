@@ -175,7 +175,7 @@ export default function AboutSection() {
               <div className="relative pt-6 border-t border-purple-500/20 z-10">
                 <h4 className="text-white text-base font-medium mb-5">技能工具</h4>
                 <div className="flex flex-wrap gap-2">
-                  {['Figma', 'Sketch', 'Adobe XD', 'Photoshop', 'Illustrator', 'After Effects', 'Blender', 'Midjourney', 'Stable Diffusion', 'Framer'].map((tool) =>
+                  {['Figma', 'Sketch', 'Photoshop', 'Illustrator', 'After Effects', 'Blender', 'Midjourney', 'Stable Diffusion'].map((tool) =>
                   <span
                     key={tool}
                     className="px-5 py-2.5 rounded-full border border-neutral-700/50 text-neutral-300 text-sm hover:border-purple-400/50 hover:text-white hover:bg-purple-500/5 transition-all duration-300 cursor-default">
