@@ -40,13 +40,13 @@ export default function Home() {
         {/* 左上方紫色光束 - spotlight effect */}
         <motion.div 
           style={{ y: yParallax }} 
-          className="light-beam absolute -top-20 left-[15%] w-[500px] h-[120%] bg-gradient-to-b from-purple-400/[0.12] via-purple-500/[0.06] to-transparent blur-3xl rotate-12" 
+          className="light-beam absolute -top-20 left-[15%] w-[500px] h-[160%] bg-gradient-to-b from-purple-400/[0.12] via-purple-500/[0.06] to-transparent blur-3xl rotate-12" 
         />
         
         {/* 右上方紫色光束 - spotlight effect */}
         <motion.div 
           style={{ y: useTransform(scrollY, [0, 500], [0, 100]) }}
-          className="light-beam absolute -top-20 right-[15%] w-[500px] h-[120%] bg-gradient-to-b from-purple-400/[0.12] via-purple-500/[0.06] to-transparent blur-3xl -rotate-12"
+          className="light-beam absolute -top-20 right-[15%] w-[500px] h-[160%] bg-gradient-to-b from-purple-400/[0.12] via-purple-500/[0.06] to-transparent blur-3xl -rotate-12"
           style={{ animationDelay: '1s' }} 
         />
         
