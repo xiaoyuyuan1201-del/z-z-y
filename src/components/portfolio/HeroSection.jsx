@@ -38,20 +38,40 @@ export default function HeroSection() {
       </div>
       
       
-      <motion.div 
+      <motion.div
         className="relative z-10 text-center max-w-4xl mx-auto"
-        style={{ y: yOffset, opacity: opacityFade }}
-      >
+        style={{ y: yOffset, opacity: opacityFade }}>
 
+        {/* Avatar */}
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileHover={{ scale: 1.08, rotate: 2 }}
+          className="mb-8 group">
+
+          <div className="relative w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-purple-400 to-pink-500 p-[2px] overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-400/50 to-pink-500/50 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+            <div className="relative w-full h-full rounded-full bg-[#1a1035] flex items-center justify-center">
+              <span className="text-4xl font-light text-white">曾</span>
+            </div>
+          </div>
+        </motion.div>
+        
         {/* Name */}
         <motion.h1
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          whileHover={{ scale: 1.02, letterSpacing: '0.05em' }}
-          className="text-6xl md:text-8xl font-extralight text-white tracking-tight mb-6 cursor-default">
+          whileHover={{ scale: 1.02, letterSpacing: '0.05em' }} className="text-white mb-6 text-base font-semibold tracking-tight md:text-8xl cursor-default">曾紫钰
 
-          曾紫钰
+
+
         </motion.h1>
         
         {/* Title */}
@@ -123,7 +143,7 @@ export default function HeroSection() {
           <ArrowDown className="w-5 h-5 text-neutral-600" />
         </motion.div>
         </motion.div>
-    </section>
-  );
+    </section>);
+
 
 }
