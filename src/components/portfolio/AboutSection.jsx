@@ -204,8 +204,8 @@ export default function AboutSection() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-2 space-y-6">
+            transition={{ duration: 0.6 }} className="px-1 lg:col-span-2 space-y-6">
+
 
             <div className="flex items-center gap-4 mb-8">
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500/20 to-purple-600/10 flex items-center justify-center border border-purple-500/30">
@@ -224,8 +224,8 @@ export default function AboutSection() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative pl-8 pb-12 last:pb-0">
+                transition={{ duration: 0.5, delay: index * 0.1 }} className="pb-20 pl-8 relative last:pb-0">
+
 
                   {/* Timeline dot */}
                   <div className="bg-purple-500 rounded-full absolute left-0 top-0 -translate-x-1/2 w-3 h-3 border-2 border-[#0a0514] shadow-lg shadow-purple-500/50" />
