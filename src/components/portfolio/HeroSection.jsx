@@ -122,7 +122,7 @@ export default function HeroSection() {
             whileHover="hover"
             onHoverStart={() => setHoveredButton('works')}
             onHoverEnd={() => setHoveredButton(null)}
-            className="px-8 py-3 bg-[#161035] text-white text-base font-medium tracking-wide rounded-full hover:bg-[#1f1544] transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 cursor-pointer min-w-[140px]">
+            className="px-8 py-3 bg-white/40 text-white border border-white/80 text-base font-medium tracking-wide rounded-full hover:bg-white/50 transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 cursor-pointer min-w-[140px]">
 
             查看作品
           </motion.a>
