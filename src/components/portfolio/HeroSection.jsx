@@ -65,10 +65,7 @@ export default function HeroSection() {
         
         {/* Name */}
         <h1 className="text-white mb-6 text-base font-semibold tracking-tight md:text-8xl cursor-default">曾紫钰
-
-
-
-        </motion.h1>
+        </h1>
         
         {/* Title */}
         <motion.p
