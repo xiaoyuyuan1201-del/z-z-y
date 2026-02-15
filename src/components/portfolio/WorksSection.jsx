@@ -14,7 +14,7 @@ export default function WorksSection({ projects, isLoading }) {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <section id="works" className="py-32 px-16 bg-gradient-to-b from-[#000000] to-[#0a0514]">
+    <section id="works" className="py-32 px-16 bg-gradient-to-b from-[#000000] to-[#0a0f2c]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -24,7 +24,7 @@ export default function WorksSection({ projects, isLoading }) {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-4">
+          <p className="text-cyan-400 text-sm font-medium tracking-widest uppercase mb-4">
             作品集
           </p>
           <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight">
@@ -47,7 +47,7 @@ export default function WorksSection({ projects, isLoading }) {
               className={`px-5 py-2 text-sm font-light rounded-full transition-all duration-300 ${
                 activeCategory === category
                   ? 'bg-white text-neutral-900'
-                  : 'text-neutral-400 hover:text-white border border-purple-900/50 hover:border-neutral-600'
+                  : 'text-neutral-400 hover:text-white border border-blue-900/50 hover:border-neutral-600'
               }`}
             >
               {category}

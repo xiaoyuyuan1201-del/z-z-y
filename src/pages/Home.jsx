@@ -24,7 +24,7 @@ export default function Home() {
   });
 
   return (
-    <div className="min-h-screen bg-[#06042D] relative overflow-hidden" ref={containerRef}>
+    <div className="min-h-screen bg-[#0a0f2c] relative overflow-hidden" ref={containerRef}>
       {/* 舞台灯光背景效果 */}
       <style>{`
         @keyframes lightPulse {
@@ -37,24 +37,24 @@ export default function Home() {
       `}</style>
       
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* 左上方紫色光束 - spotlight effect */}
+        {/* 左上方蓝色光束 - spotlight effect */}
         <motion.div 
           style={{ y: yParallax }} 
-          className="light-beam absolute -top-20 left-[15%] w-[500px] h-[160%] bg-gradient-to-b from-purple-400/[0.12] via-purple-500/[0.06] to-transparent blur-3xl rotate-12" 
+          className="light-beam absolute -top-20 left-[15%] w-[500px] h-[160%] bg-gradient-to-b from-cyan-400/[0.12] via-blue-500/[0.06] to-transparent blur-3xl rotate-12" 
         />
         
-        {/* 右上方紫色光束 - spotlight effect */}
+        {/* 右上方蓝色光束 - spotlight effect */}
         <motion.div 
           style={{ y: useTransform(scrollY, [0, 500], [0, 100]) }}
-          className="light-beam absolute -top-20 right-[15%] w-[500px] h-[160%] bg-gradient-to-b from-purple-400/[0.12] via-purple-500/[0.06] to-transparent blur-3xl -rotate-12"
+          className="light-beam absolute -top-20 right-[15%] w-[500px] h-[160%] bg-gradient-to-b from-cyan-400/[0.12] via-blue-500/[0.06] to-transparent blur-3xl -rotate-12"
           style={{ animationDelay: '1s' }} 
         />
         
-        {/* 底部中心强烈紫色光辉 - stage glow */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-radial from-purple-300/[0.16] via-purple-400/[0.12] to-transparent blur-3xl" />
+        {/* 底部中心强烈蓝色光辉 - stage glow */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-radial from-blue-300/[0.16] via-blue-400/[0.12] to-transparent blur-3xl" />
         
         {/* 底部扩散光 - platform glow */}
-        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-purple-500/[0.08] via-purple-400/[0.04] to-transparent blur-2xl" />
+        <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-blue-500/[0.08] via-blue-400/[0.04] to-transparent blur-2xl" />
       </div>
       <div className="relative z-10">
         <Navbar />
