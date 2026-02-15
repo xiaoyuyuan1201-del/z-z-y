@@ -43,25 +43,25 @@ export default function HeroSection() {
         style={{ y: yOffset, opacity: opacityFade }}>
 
         {/* Avatar */}
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          whileHover={{ scale: 1.08, rotate: 2 }}
-          className="mb-8 group">
+        
 
-          <div className="relative w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-purple-400 to-pink-500 p-[2px] overflow-hidden">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-400/50 to-pink-500/50 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-            <div className="relative w-full h-full rounded-full bg-[#1a1035] flex items-center justify-center">
-              <span className="text-4xl font-light text-white">曾</span>
-            </div>
-          </div>
-        </motion.div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         {/* Name */}
         <motion.h1
@@ -111,7 +111,7 @@ export default function HeroSection() {
             whileHover="hover"
             onHoverStart={() => setHoveredButton('about')}
             onHoverEnd={() => setHoveredButton(null)}
-            className="px-8 py-3 bg-white text-neutral-900 text-base font-medium tracking-wide rounded-full hover:bg-neutral-100 transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 cursor-pointer">
+            className="px-8 py-4 bg-white text-neutral-900 text-base font-medium tracking-wide rounded-lg hover:bg-neutral-100 transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 cursor-pointer">
 
             了解我
           </motion.a>
@@ -122,7 +122,7 @@ export default function HeroSection() {
             whileHover="hover"
             onHoverStart={() => setHoveredButton('works')}
             onHoverEnd={() => setHoveredButton(null)}
-            className="px-8 py-3 border border-neutral-700 text-neutral-300 text-base font-medium tracking-wide rounded-full hover:border-purple-400 hover:text-purple-300 transition-all duration-300 shadow-lg shadow-neutral-900/20 hover:shadow-xl hover:shadow-purple-500/20 cursor-pointer">
+            className="px-8 py-4 border border-neutral-700 text-neutral-300 text-base font-medium tracking-wide rounded-lg hover:border-purple-400 hover:text-purple-300 transition-all duration-300 shadow-lg shadow-neutral-900/20 hover:shadow-xl hover:shadow-purple-500/20 cursor-pointer">
 
             查看作品
           </motion.a>
