@@ -26,13 +26,13 @@ export default function HeroSection() {
         <Prism
           animationType="rotate"
           timeScale={0.5}
-          height={2.5}
+          height={2.7}
           baseWidth={5.5}
           scale={2.8}
-          hueShift={0}
+          hueShift={270}
           colorFrequency={1}
           noise={0}
-          glow={2}
+          glow={0.3}
           bloom={1.5} />
 
       </div>
