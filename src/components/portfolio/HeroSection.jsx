@@ -20,9 +20,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center relative px-4 py-20">
-      {/* Container with limited width */}
-      <div className="w-full max-w-6xl mx-auto px-12">
+    <section className="min-h-screen flex flex-col justify-center items-center relative px-16 py-20">
       {/* 3D Prism Background */}
       <div className="absolute inset-0 overflow-hidden w-full h-full">
         <Prism
@@ -41,7 +39,7 @@ export default function HeroSection() {
       
       
       <motion.div 
-        className="relative z-10 text-center w-full"
+        className="relative z-10 text-center max-w-4xl mx-auto"
         style={{ y: yOffset, opacity: opacityFade }}
       >
         {/* Avatar */}
@@ -130,7 +128,6 @@ export default function HeroSection() {
           </motion.a>
         </motion.div>
         </motion.div>
-      </div>
 
         {/* Scroll indicator */}
         <motion.div
