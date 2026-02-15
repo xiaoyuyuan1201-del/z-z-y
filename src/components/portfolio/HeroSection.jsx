@@ -26,7 +26,7 @@ export default function HeroSection() {
         <Prism
           animationType="rotate"
           timeScale={0.5}
-          height={3.1}
+          height={2.7}
           baseWidth={5.5}
           scale={2.8}
           hueShift={270}
