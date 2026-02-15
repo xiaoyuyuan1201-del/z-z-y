@@ -26,13 +26,13 @@ export default function HeroSection() {
         <Prism
           animationType="rotate"
           timeScale={0.5}
-          height={2.7}
+          height={2.5}
           baseWidth={5.5}
           scale={2.8}
-          hueShift={270}
+          hueShift={0}
           colorFrequency={1}
           noise={0}
-          glow={0.3}
+          glow={2}
           bloom={1.5} />
 
       </div>
@@ -110,10 +110,10 @@ export default function HeroSection() {
             initial="rest"
             whileHover="hover"
             onHoverStart={() => setHoveredButton('about')}
-            onHoverEnd={() => setHoveredButton(null)}
-            className="px-8 py-3 bg-[#161035] text-white text-base font-medium tracking-wide rounded-full hover:bg-[#1f1544] transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 cursor-pointer min-w-[140px]">
+            onHoverEnd={() => setHoveredButton(null)} className="bg-[#413190] text-white px-8 py-3 text-base font-medium tracking-wide rounded-full hover:bg-[#1f1544] transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 cursor-pointer min-w-[140px]">了解我
 
-            了解我
+
+
           </motion.a>
           <motion.a
             href="#works"
@@ -121,10 +121,10 @@ export default function HeroSection() {
             initial="rest"
             whileHover="hover"
             onHoverStart={() => setHoveredButton('works')}
-            onHoverEnd={() => setHoveredButton(null)}
-            className="px-8 py-3 bg-[#161035] text-white text-base font-medium tracking-wide rounded-full hover:bg-[#1f1544] transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 cursor-pointer min-w-[140px]">
+            onHoverEnd={() => setHoveredButton(null)} className="bg-[#ffffff] text-white px-8 py-3 text-base font-medium tracking-wide opacity-30 rounded-full hover:bg-[#1f1544] transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 cursor-pointer min-w-[140px]">查看作品
 
-            查看作品
+
+
           </motion.a>
         </motion.div>
         </motion.div>
