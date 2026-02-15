@@ -51,7 +51,7 @@ export default function ProjectCard({ project, index, onOpenModal }) {
         <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
           <div className="flex items-start justify-between">
             <div>
-              <p className="text-purple-400 text-xs font-medium tracking-wider uppercase mb-2">
+              <p className="text-cyan-400 text-xs font-medium tracking-wider uppercase mb-2">
                 {project.category || '项目'}
               </p>
               <h3 className="text-white text-xl font-light mb-2">

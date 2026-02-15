@@ -10,7 +10,7 @@ const tools = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-32 px-16 bg-[#000000]">
+    <section id="contact" className="py-32 px-16 bg-gradient-to-b from-[#0a0514] via-[#0f0a2e] to-[#001a3d]">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left Column */}
@@ -20,7 +20,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-6">
+            <p className="text-cyan-400 text-sm font-medium tracking-widest uppercase mb-6">
               关于我
             </p>
             
