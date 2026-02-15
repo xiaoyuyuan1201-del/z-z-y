@@ -65,7 +65,7 @@ const interests = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-32 px-16 bg-gradient-to-b from-[#0a0514] via-[#0f0a2e] to-[#001a3d]">
+    <section id="about" className="py-32 px-16 bg-gradient-to-b from-[#0a0514] to-[#000000]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -75,7 +75,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20">
 
-          <p className="text-cyan-400 text-sm font-medium tracking-widest uppercase mb-4">
+          <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-4">
             关于我
           </p>
           <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight">
