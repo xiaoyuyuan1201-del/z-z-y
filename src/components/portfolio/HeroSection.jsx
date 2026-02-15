@@ -110,10 +110,10 @@ export default function HeroSection() {
             initial="rest"
             whileHover="hover"
             onHoverStart={() => setHoveredButton('about')}
-            onHoverEnd={() => setHoveredButton(null)}
-            className="px-8 py-3 bg-[#161035] text-white text-base font-medium tracking-wide rounded-full hover:bg-[#1f1544] transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 cursor-pointer min-w-[140px]">
+            onHoverEnd={() => setHoveredButton(null)} className="bg-[#413190] text-white px-8 py-3 text-base font-medium tracking-wide rounded-full hover:bg-[#1f1544] transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 cursor-pointer min-w-[140px]">了解我
 
-            了解我
+
+
           </motion.a>
           <motion.a
             href="#works"
@@ -122,7 +122,7 @@ export default function HeroSection() {
             whileHover="hover"
             onHoverStart={() => setHoveredButton('works')}
             onHoverEnd={() => setHoveredButton(null)}
-            className="px-8 py-3 bg-white/40 text-white border border-white/80 text-base font-medium tracking-wide rounded-full hover:bg-white/50 transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 cursor-pointer min-w-[140px]">
+            className="px-8 py-4 border border-neutral-700 text-neutral-300 text-base font-medium tracking-wide rounded-lg hover:border-purple-400 hover:text-purple-300 transition-all duration-300 shadow-lg shadow-neutral-900/20 hover:shadow-xl hover:shadow-purple-500/20 cursor-pointer">
 
             查看作品
           </motion.a>
