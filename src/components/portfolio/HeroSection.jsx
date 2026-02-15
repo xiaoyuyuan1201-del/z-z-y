@@ -64,11 +64,7 @@ export default function HeroSection() {
 
         
         {/* Name */}
-        <motion.h1
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          whileHover={{ scale: 1.02, letterSpacing: '0.05em' }} className="text-white mb-6 text-base font-semibold tracking-tight md:text-8xl cursor-default">曾紫钰
+        <h1 className="text-white mb-6 text-base font-semibold tracking-tight md:text-8xl cursor-default">曾紫钰
 
 
 
