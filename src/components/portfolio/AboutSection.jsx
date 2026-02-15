@@ -124,17 +124,17 @@ export default function AboutSection() {
               {/* Basic Info */}
               <div className="relative space-y-3 text-sm mb-8 z-10">
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="group relative bg-gradient-to-br from-purple-500/10 to-purple-600/5 rounded-xl p-3 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                  <div className="bg-gradient-to-br pt-1 pr-3 pb-1 pl-3 rounded-xl group relative from-purple-500/10 to-purple-600/5 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                     <div className="text-neutral-400 text-[10px] uppercase tracking-wider mb-1 font-light">年龄</div>
                     <div className="text-white font-semibold text-base">23岁</div>
-                    <div className="text-purple-300 text-[10px] mt-0.5">25届</div>
+                    
                   </div>
-                  <div className="group relative bg-gradient-to-br from-purple-500/10 to-pink-500/5 rounded-xl p-3 border border-purple-500/20 hover:border-pink-500/40 transition-all duration-300">
+                  <div className="bg-gradient-to-br pt-1 pr-3 pb-1 pl-3 rounded-xl group relative from-purple-500/10 to-pink-500/5 border border-purple-500/20 hover:border-pink-500/40 transition-all duration-300">
                     <div className="text-neutral-400 text-[10px] uppercase tracking-wider mb-1 font-light">学历</div>
                     <div className="text-white font-semibold text-base">本科</div>
                   </div>
                 </div>
-                <div className="group relative bg-gradient-to-br from-purple-500/10 via-purple-600/5 to-pink-500/5 rounded-xl p-3 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+                <div className="bg-gradient-to-br pt-1 pr-3 pb-1 pl-3 rounded-xl group relative from-purple-500/10 via-purple-600/5 to-pink-500/5 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                   <div className="text-neutral-400 text-[10px] uppercase tracking-wider mb-1 font-light">专业</div>
                   <div className="text-white font-semibold text-sm">数字媒体艺术</div>
                 </div>
