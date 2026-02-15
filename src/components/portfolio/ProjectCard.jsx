@@ -86,7 +86,7 @@ export default function ProjectCard({ project, index, onOpenModal }) {
         {/* Featured badge */}
         {project.featured && (
           <div className="absolute top-4 left-4">
-            <span className="px-3 py-1 bg-blue-500/90 backdrop-blur-sm text-white text-xs font-medium rounded-full">
+            <span className="px-3 py-1 bg-purple-500/90 backdrop-blur-sm text-white text-xs font-medium rounded-full">
               精选
             </span>
           </div>

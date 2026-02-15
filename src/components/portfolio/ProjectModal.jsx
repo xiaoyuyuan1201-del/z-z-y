@@ -20,7 +20,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="bg-gradient-to-br from-[#0a1128]/95 to-[#0f1a33]/95 backdrop-blur-xl rounded-3xl border border-blue-500/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl shadow-blue-900/50"
+            className="bg-gradient-to-br from-[#0f0a1f]/95 to-[#1a0f2e]/95 backdrop-blur-xl rounded-3xl border border-purple-500/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl shadow-purple-900/50"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
@@ -43,7 +43,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   />
                   {project.featured && (
                     <div className="absolute top-4 left-4">
-                      <span className="px-4 py-2 bg-blue-500/90 backdrop-blur-sm text-white text-sm font-medium rounded-full">
+                      <span className="px-4 py-2 bg-purple-500/90 backdrop-blur-sm text-white text-sm font-medium rounded-full">
                         精选项目
                       </span>
                     </div>
@@ -53,7 +53,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 
               {/* Header */}
               <div className="mb-8">
-                <p className="text-cyan-400 text-sm font-medium tracking-widest uppercase mb-3">
+                <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-3">
                   {project.category || '项目'}
                 </p>
                 <h2 className="text-4xl md:text-5xl font-extralight text-white mb-4">
@@ -64,7 +64,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 <div className="flex flex-wrap gap-6 mb-6">
                   {project.year && (
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4 text-cyan-400" />
+                      <Calendar className="w-4 h-4 text-purple-400" />
                       <span className="text-neutral-400 text-sm">{project.year}</span>
                     </div>
                   )}
@@ -73,7 +73,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
+                      className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium"
                     >
                       <span>查看原文件</span>
                       <ExternalLink className="w-4 h-4" />
@@ -99,7 +99,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                     {project.tools.map((tool) => (
                       <span
                         key={tool}
-                        className="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-300 text-sm font-light hover:bg-blue-500/20 hover:border-blue-500/50 transition-all"
+                        className="px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-lg text-purple-300 text-sm font-light hover:bg-purple-500/20 hover:border-purple-500/50 transition-all"
                       >
                         {tool}
                       </span>
@@ -110,7 +110,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 
               {/* Additional Details */}
               {project.details && (
-                <div className="pt-8 border-t border-blue-500/20">
+                <div className="pt-8 border-t border-purple-500/20">
                   <h3 className="text-white font-medium text-sm uppercase tracking-wider mb-4">
                     项目详情
                   </h3>
