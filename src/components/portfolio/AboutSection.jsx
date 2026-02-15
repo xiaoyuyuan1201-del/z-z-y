@@ -260,7 +260,7 @@ export default function AboutSection() {
               className="mt-12 grid grid-cols-3 gap-6">
 
               {[
-              { title: '微信', image: '/qr-wechat.png' },
+              { title: '微信', image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698ddbdd72ba750ccf34f1a0/6887c93c3_image.png' },
               { title: 'QQ', image: '/qr-qq.png' },
               { title: '小红书', image: '/qr-xiaohongshu.png' }].
               map((qr, index) =>
