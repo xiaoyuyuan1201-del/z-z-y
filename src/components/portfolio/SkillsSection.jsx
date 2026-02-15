@@ -43,7 +43,7 @@ const skills = [
 
 export default function SkillsSection() {
   return (
-    <section className="py-32 px-16 bg-gradient-to-b from-[#0a0514] to-[#1a0f2e]">
+    <section className="py-32 px-16 bg-gradient-to-b from-[#0a0f2c] to-[#0f1a33]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -53,7 +53,7 @@ export default function SkillsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-4">
+          <p className="text-cyan-400 text-sm font-medium tracking-widest uppercase mb-4">
             技能
           </p>
           <h2 className="text-4xl md:text-5xl font-extralight text-white tracking-tight">
@@ -72,10 +72,10 @@ export default function SkillsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group p-8 rounded-2xl bg-[#0f0a1f]/80 border border-purple-900/50 hover:border-purple-500/50 transition-all duration-500"
+                className="group p-8 rounded-2xl bg-[#0a1128]/80 border border-blue-900/50 hover:border-blue-500/50 transition-all duration-500"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                  <Icon className="w-6 h-6 text-purple-400" />
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <Icon className="w-6 h-6 text-cyan-400" />
                 </div>
                 
                 <h3 className="text-xl font-light text-white mb-3">
@@ -90,7 +90,7 @@ export default function SkillsSection() {
                   {skill.tools.map((tool) => (
                     <span 
                       key={tool}
-                      className="px-3 py-1 text-xs font-light text-neutral-400 bg-purple-900/30 rounded-full"
+                      className="px-3 py-1 text-xs font-light text-neutral-400 bg-blue-900/30 rounded-full"
                     >
                       {tool}
                     </span>

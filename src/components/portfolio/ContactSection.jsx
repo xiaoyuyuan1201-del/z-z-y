@@ -20,7 +20,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-6">
+            <p className="text-cyan-400 text-sm font-medium tracking-widest uppercase mb-6">
               关于我
             </p>
             
@@ -41,8 +41,8 @@ export default function ContactSection() {
             {/* Contact Info */}
             <div className="space-y-4">
               <a 
-                href="mailto:hello@designer.com"
-                className="flex items-center gap-3 text-neutral-300 hover:text-purple-400 transition-colors group"
+                 href="mailto:hello@designer.com"
+                 className="flex items-center gap-3 text-neutral-300 hover:text-cyan-400 transition-colors group"
               >
                 <Mail className="w-5 h-5" />
                 <span>hello@designer.com</span>
@@ -54,8 +54,8 @@ export default function ContactSection() {
               </div>
               
               <a 
-                href="#"
-                className="flex items-center gap-3 text-purple-300 hover:text-purple-400 transition-colors group"
+                 href="#"
+                 className="flex items-center gap-3 text-cyan-300 hover:text-cyan-400 transition-colors group"
               >
                 <ExternalLink className="w-5 h-5" />
                 <span>Behance / Dribbble / 站酷</span>
@@ -78,7 +78,7 @@ export default function ContactSection() {
                 {tools.map((tool) => (
                   <span
                     key={tool}
-                    className="px-5 py-2.5 rounded-full border border-purple-900/50 text-neutral-300 text-sm hover:border-purple-400 hover:text-white hover:bg-purple-500/10 transition-all duration-300"
+                    className="px-5 py-2.5 rounded-full border border-blue-900/50 text-neutral-300 text-sm hover:border-blue-400 hover:text-white hover:bg-blue-500/10 transition-all duration-300"
                   >
                     {tool}
                   </span>
@@ -89,7 +89,7 @@ export default function ContactSection() {
             {/* Collaboration */}
             <div>
               <h3 className="text-white text-xl font-semibold mb-4">
-                开放合作 <span className="text-purple-400">+</span>
+                 开放合作 <span className="text-cyan-400">+</span>
               </h3>
               <p className="text-neutral-400 text-base leading-relaxed">
                 目前正在寻找 UI 设计师的全职岗位。也欢迎自由项目合作，如果你对我的作品感兴趣，欢迎随时联系！
