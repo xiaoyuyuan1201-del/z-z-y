@@ -63,19 +63,19 @@ export default function HeroSection() {
 
 
         
-        {/* Name */}
-        <h1 className="text-white mb-6 text-base font-semibold tracking-tight md:text-8xl cursor-default">曾紫钰
+        {/* Main Title */}
+        <h1 className="text-white mb-8 text-7xl md:text-9xl font-bold tracking-tight cursor-default">PORTFOLIO
         </h1>
         
-        {/* Title */}
+        {/* Name - Subtitle */}
         <motion.p
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           whileHover={{ scale: 1.01, color: '#c084fc' }}
-          className="text-xl md:text-2xl text-neutral-300 font-light tracking-wide mb-4 cursor-default transition-colors">
+          className="text-3xl md:text-4xl text-neutral-300 font-semibold tracking-wide mb-4 cursor-default transition-colors">
 
-          UI设计师 · 2025届毕业生
+          曾紫钰
         </motion.p>
         
         {/* Bio */}
