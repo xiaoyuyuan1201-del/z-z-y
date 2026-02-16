@@ -104,7 +104,7 @@ export default function HeroSection() {
             whileHover="hover"
             onHoverStart={() => setHoveredButton('about')}
             onHoverEnd={() => setHoveredButton(null)}
-            className="px-8 py-3 bg-[#161035] text-white text-base font-medium tracking-wide rounded-full hover:bg-[#1f1544] transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 cursor-pointer min-w-[140px]">
+            className="px-8 py-3 bg-white text-black text-base font-medium tracking-wide rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 cursor-pointer min-w-[140px]">
 
             了解我
           </motion.a>
