@@ -54,7 +54,45 @@ export default function ProjectCard({ project, index, onOpenModal }) {
             </button>
           )}
         
-
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+        
+        {/* Content on hover */}
+        <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+          <div className="flex items-start justify-between">
+            <div>
+              <p className="text-purple-400 text-xs font-medium tracking-wider uppercase mb-2">
+                {project.category || '项目'}
+              </p>
+              <h3 className="text-white text-xl font-light mb-2">
+                {project.title}
+              </h3>
+              <p className="text-neutral-400 text-sm font-light line-clamp-2 mb-2">
+                {project.description}
+              </p>
+              {project.tools?.length > 0 && (
+                <div className="flex flex-wrap gap-1">
+                  {project.tools.slice(0, 3).map((tool) => (
+                    <span key={tool} className="px-2 py-0.5 text-xs bg-white/10 rounded-full text-neutral-300">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+            {project.link && (
+              <a 
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
+              >
+                <ArrowUpRight className="w-5 h-5 text-white" />
+              </a>
+            )}
+          </div>
+        </div>
         
         {/* Featured badge */}
         {project.featured && (
