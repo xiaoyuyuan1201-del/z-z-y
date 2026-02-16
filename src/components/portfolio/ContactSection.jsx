@@ -10,7 +10,7 @@ const tools = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="px-16 py-24 bg-[#0C0518]">
+    <section id="contact" className="py-32 px-16 bg-[#0C0518]">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left Column */}

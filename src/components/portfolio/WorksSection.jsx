@@ -14,7 +14,7 @@ export default function WorksSection({ projects, isLoading }) {
   projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="works" className="bg-gradient-to-b px-16 py-24 from-[#0C0518] to-[#0C0518]">
+    <section id="works" className="bg-gradient-to-b pr-16 pb-32 pl-16 from-[#0C0518] to-[#0C0518]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
