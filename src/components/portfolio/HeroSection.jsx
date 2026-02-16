@@ -64,7 +64,20 @@ export default function HeroSection() {
 
         
         {/* Main Title */}
-        <h1 className="text-white mb-8 text-7xl md:text-9xl font-bold tracking-tight cursor-default">PORTFOLIO
+        <h1 className="mb-8 text-7xl md:text-9xl font-bold tracking-tight cursor-default">
+          <ShinyText
+            text="PORTFOLIO"
+            speed={3}
+            delay={0}
+            color="#ffffff"
+            shineColor="#c084fc"
+            spread={90}
+            direction="left"
+            yoyo={false}
+            pauseOnHover={false}
+            disabled={false}
+            className="text-white"
+          />
         </h1>
         
         {/* Name - Subtitle */}
