@@ -68,10 +68,10 @@ export default function HeroSection() {
         <h1 className="mb-8 text-7xl md:text-9xl font-bold tracking-tight cursor-default">
           <ShinyText
             text="PORTFOLIO"
-            speed={3}
+            speed={2}
             delay={0}
             color="#ffffff"
-            shineColor="#c084fc"
+            shineColor="#ffffff"
             spread={90}
             direction="left"
             yoyo={false}
