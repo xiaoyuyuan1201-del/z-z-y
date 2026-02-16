@@ -66,7 +66,7 @@ const interests = [
 export default function AboutSection() {
   return (
     <section id="about" className="bg-gradient-to-b px-16 py-20 from-[#0C0518] to-[#0C0518]">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto py-16 max-w-7xl">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
