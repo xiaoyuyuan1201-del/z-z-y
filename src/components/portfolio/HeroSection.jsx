@@ -71,7 +71,7 @@ export default function HeroSection() {
             speed={3}
             delay={0}
             color="#ffffff"
-            shineColor="#c084fc"
+            shineColor="#b5b5b5"
             spread={90}
             direction="left"
             yoyo={false}
