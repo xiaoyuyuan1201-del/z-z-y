@@ -25,9 +25,9 @@ export default function ShinyText({
     <span className={`relative inline-block ${className}`} style={{ color }}>
       {text}
       <motion.span
-        className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0"
+        className="absolute inset-0 opacity-0"
         style={{
-          backgroundImage: `linear-gradient(${direction === 'left' ? '90deg' : '-90deg'}, transparent, ${shineColor}, transparent)`,
+          backgroundImage: `linear-gradient(${direction === 'left' ? '90deg' : '-90deg'}, transparent, rgba(255,255,255,0.8), transparent)`,
           backgroundSize: '200% 100%',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
