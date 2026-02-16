@@ -65,7 +65,7 @@ const interests = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-32 px-16 bg-gradient-to-b from-[#0C0518] to-[#0C0518]">
+    <section id="about" className="bg-gradient-to-b px-16 py-20 from-[#0C0518] to-[#0C0518]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -287,71 +287,71 @@ export default function AboutSection() {
         </div>
 
         {/* Soft Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-20">
+        
 
-          <h3 className="text-2xl font-light text-white text-center mb-12">核心技能</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {softSkills.map((skill, index) => {
-              const Icon = skill.icon;
-              return (
-                <motion.div
-                  key={skill.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="relative group">
 
-                  {/* Glow effect */}
-                  <div className="absolute -inset-0.5 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500" />
-                  
-                  <div className="relative p-6 rounded-2xl bg-gradient-to-br from-[#0f0a1f]/90 to-[#1a0f2e]/80 backdrop-blur-xl border border-purple-500/30 group-hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-500 text-center h-full">
-                    {/* Background decoration */}
-                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-purple-500/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    
-                    <div className="relative z-10">
-                      <div className="w-16 h-16 mx-auto rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                        <Icon className="w-7 h-7 text-purple-400 group-hover:text-purple-300 transition-colors" />
-                      </div>
-                      <h4 className="text-white font-semibold text-sm mb-2 group-hover:text-purple-200 transition-colors">{skill.title}</h4>
-                      <p className="text-neutral-400 text-xs leading-relaxed group-hover:text-neutral-300 transition-colors">{skill.description}</p>
-                    </div>
-                  </div>
-                </motion.div>);
 
-            })}
-          </div>
-        </motion.div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         {/* Interests */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center">
+        
 
-          <h3 className="text-2xl font-light text-white mb-8">兴趣爱好</h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {interests.map((interest, index) =>
-            <motion.span
-              key={interest}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="px-5 py-2 rounded-full border border-neutral-700 text-neutral-300 font-light hover:border-purple-400 hover:text-purple-400 transition-colors cursor-default">
 
-                {interest}
-              </motion.span>
-            )}
-          </div>
-        </motion.div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </section>);
 
