@@ -65,7 +65,7 @@ const interests = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-32 px-16 bg-gradient-to-b from-[#0a0514] to-[#000000]">
+    <section id="about" className="py-32 px-16 bg-gradient-to-b from-[#0C0518] to-[#0C0518]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -228,7 +228,7 @@ export default function AboutSection() {
 
 
                   {/* Timeline dot */}
-                  <div className="bg-purple-500 rounded-full absolute left-0 top-0 -translate-x-1/2 w-3 h-3 border-2 border-[#0a0514] shadow-lg shadow-purple-500/50" />
+                  <div className="bg-purple-500 rounded-full absolute left-0 top-0 -translate-x-1/2 w-3 h-3 border-2 border-[#0C0518] shadow-lg shadow-purple-500/50" />
                   
                   {/* Period badge */}
                   <div className="bg-purple-500/10 text-purple-300 mb-4 px-4 py-2 text-xs font-medium rounded-full inline-block border border-purple-500/30">
