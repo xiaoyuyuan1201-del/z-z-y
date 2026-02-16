@@ -21,7 +21,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="flex flex-col justify-center items-center relative px-16 py-20" style={{ minHeight: 'calc(100vh - 100px)' }}>
+    <section className="flex flex-col justify-center items-center relative px-16 py-24" style={{ minHeight: 'calc(100vh - 100px)' }}>
       {/* 3D Prism Background */}
       <div className="absolute inset-0 overflow-hidden w-full h-full bg-gradient-to-b from-[#0C0518] to-[#0C0518]">
         <Prism
