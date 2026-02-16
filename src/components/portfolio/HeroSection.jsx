@@ -30,7 +30,7 @@ export default function HeroSection() {
           height={2.7}
           baseWidth={5.5}
           scale={2.8}
-          hueShift={300}
+          hueShift={320}
           colorFrequency={1}
           noise={0}
           glow={0.3}
