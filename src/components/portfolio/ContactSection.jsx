@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { Mail, MapPin, ExternalLink } from 'lucide-react';
 
 const tools = [
-  'Figma', 'Sketch', 'Adobe XD', 'Photoshop',
-  'Illustrator', 'After Effects', 'Blender', 'Midjourney',
-  'Stable Diffusion', 'Framer'
-];
+'Figma', 'Sketch', 'Adobe XD', 'Photoshop',
+'Illustrator', 'After Effects', 'Blender', 'Midjourney',
+'Stable Diffusion', 'Framer'];
+
 
 export default function ContactSection() {
   return (
@@ -18,16 +18,16 @@ export default function ContactSection() {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-6">
-              关于我
+            transition={{ duration: 0.6 }}>
+
+            <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-6">感谢观看
+
             </p>
             
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-12 leading-tight">
-              让我们一次
-              <br />
-              创造更多可能
+            <h2 className="text-white mb-12 text-sm font-bold normal-case leading-tight md:text-6xl">让我们一起创造更多可能
+
+
+
             </h2>
             
             <p className="text-neutral-400 text-base leading-relaxed mb-8">
@@ -40,23 +40,23 @@ export default function ContactSection() {
             
             {/* Contact Info */}
             <div className="space-y-4">
-              <a 
+              <a
                 href="mailto:hello@designer.com"
-                className="flex items-center gap-3 text-neutral-300 hover:text-purple-400 transition-colors group"
-              >
+                className="flex items-center gap-3 text-neutral-300 hover:text-purple-400 transition-colors group">
+
                 <Mail className="w-5 h-5" />
-                <span>hello@designer.com</span>
+                <span className="">2944905483@qq.com</span>
               </a>
               
               <div className="flex items-center gap-3 text-neutral-300">
                 <MapPin className="w-5 h-5" />
-                <span>中国 · 深圳</span>
+                <span className="">中国 · 杭州
+                </span>
               </div>
               
-              <a 
-                href="#"
-                className="flex items-center gap-3 text-purple-300 hover:text-purple-400 transition-colors group"
-              >
+              <a href="#"
+              className="flex items-center gap-3 text-purple-300 hover:text-purple-400 transition-colors group">
+
                 <ExternalLink className="w-5 h-5" />
                 <span>Behance / Dribbble / 站酷</span>
               </a>
@@ -68,21 +68,21 @@ export default function ContactSection() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-12"
-          >
+            transition={{ duration: 0.6 }} className="py-48 space-y-12">
+
+
             {/* Tools */}
             <div>
               <h3 className="text-white text-xl font-semibold mb-6">技能工具</h3>
               <div className="flex flex-wrap gap-3">
-                {tools.map((tool) => (
-                  <span
-                    key={tool}
-                    className="px-5 py-2.5 rounded-full border border-purple-900/50 text-neutral-300 text-sm hover:border-purple-400 hover:text-white hover:bg-purple-500/10 transition-all duration-300"
-                  >
+                {tools.map((tool) =>
+                <span
+                  key={tool}
+                  className="px-5 py-2.5 rounded-full border border-purple-900/50 text-neutral-300 text-sm hover:border-purple-400 hover:text-white hover:bg-purple-500/10 transition-all duration-300">
+
                     {tool}
                   </span>
-                ))}
+                )}
               </div>
             </div>
 
@@ -98,6 +98,6 @@ export default function ContactSection() {
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
