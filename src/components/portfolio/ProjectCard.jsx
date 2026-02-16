@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, ArrowUpRight, Play, X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { createPageUrl } from '../utils';
 
 export default function ProjectCard({ project, index, onOpenModal }) {
   const [showVideo, setShowVideo] = useState(false);
   const hasVideo = project.video_url;
+  const navigate = useNavigate();
+  
+  const handleCardClick = () => {
+    navigate(createPageUrl('ProjectDetail') + '?id=' + project.id);
+  };
   
   return (
     <>
@@ -14,7 +21,7 @@ export default function ProjectCard({ project, index, onOpenModal }) {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, delay: index * 0.1 }}
         className="group relative cursor-pointer"
-        onClick={() => onOpenModal(project)}
+        onClick={handleCardClick}
       >
         <div className="relative overflow-hidden rounded-2xl bg-neutral-900 aspect-[4/3]">
           {/* Image */}
@@ -35,7 +42,10 @@ export default function ProjectCard({ project, index, onOpenModal }) {
           {/* Video Play Button */}
           {hasVideo && (
             <button
-              onClick={() => setShowVideo(true)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowVideo(true);
+              }}
               className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             >
               <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center hover:scale-110 transition-transform">
@@ -75,6 +85,7 @@ export default function ProjectCard({ project, index, onOpenModal }) {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
                 className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors"
               >
                 <ArrowUpRight className="w-5 h-5 text-white" />
