@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, ArrowUpRight, Play, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { createPageUrl } from '../utils';
+import { createPageUrl } from '@/utils';
 
 export default function ProjectCard({ project, index, onOpenModal }) {
   const [showVideo, setShowVideo] = useState(false);
