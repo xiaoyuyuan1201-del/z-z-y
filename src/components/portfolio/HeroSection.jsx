@@ -77,8 +77,8 @@ export default function HeroSection() {
             yoyo={false}
             pauseOnHover={false}
             disabled={false}
-            className="text-white"
-          />
+            className="text-white" />
+
         </h1>
         
         {/* Name - Subtitle */}
@@ -86,7 +86,7 @@ export default function HeroSection() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          whileHover={{ scale: 1.01, color: '#c084fc' }} className="text-neutral-300 mb-4 text-3xl font-normal tracking-wide md:text-4xl cursor-default transition-colors">曾紫钰
+          whileHover={{ scale: 1.01, color: '#c084fc' }} className="text-neutral-300 mb-4 text-3xl font-normal tracking-wide md:text-4xl cursor-default transition-colors">曾紫钰 · UX设计师
 
 
 
