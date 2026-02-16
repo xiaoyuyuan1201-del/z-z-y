@@ -30,7 +30,7 @@ export default function HeroSection() {
           height={2.7}
           baseWidth={5.5}
           scale={2.8}
-          hueShift={270}
+          hueShift={320}
           colorFrequency={1}
           noise={0}
           glow={0.3}
@@ -71,7 +71,7 @@ export default function HeroSection() {
             speed={3}
             delay={0}
             color="#ffffff"
-            shineColor="#b5b5b5"
+            shineColor="#c084fc"
             spread={90}
             direction="left"
             yoyo={false}
@@ -97,7 +97,7 @@ export default function HeroSection() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          whileHover={{ scale: 1.01 }} className="text-neutral-400 mx-auto text-lg font-normal leading-relaxed md:text-xl max-w-2xl cursor-default transition-colors hover:text-neutral-300">专注UI交互设计、擅长3D建模、动效设计与AI创作。 热爱探索设计与技术的无限可能。
+          whileHover={{ scale: 1.01 }} className="text-neutral-400 mx-auto pr-1 text-lg font-normal leading-relaxed md:text-xl max-w-2xl cursor-default transition-colors hover:text-neutral-300">专注UI交互设计、擅长3D建模、动效设计与AI创作。 热爱探索设计与技术的无限可能。
 
 
 
