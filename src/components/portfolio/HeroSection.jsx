@@ -64,7 +64,7 @@ export default function HeroSection() {
 
         
         {/* Main Title */}
-        <h1 className="text-white mb-8 text-7xl md:text-9xl font-bold tracking-tight cursor-default">PORTFOLIO
+        <h1 className="text-white mb-8 text-7xl md:text-9xl font-extralight tracking-widest cursor-default">PORTFOLIO
         </h1>
         
         {/* Name - Subtitle */}
