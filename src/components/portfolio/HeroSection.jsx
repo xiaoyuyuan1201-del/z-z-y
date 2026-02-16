@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import Prism from './Prism';
+import ShinyText from './ShinyText';
 
 export default function HeroSection() {
   const [hoveredButton, setHoveredButton] = useState(null);
