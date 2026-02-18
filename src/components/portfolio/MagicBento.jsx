@@ -492,16 +492,6 @@ const MagicBento = ({
               grid-column: span 2;
               grid-row: span 2;
             }
-            
-            .card-responsive .card:nth-child(4) {
-              grid-column: 1 / span 2;
-              grid-row: 2 / span 2;
-            }
-            
-            .card-responsive .card:nth-child(6) {
-              grid-column: 4;
-              grid-row: 3;
-            }
           }
           
           .card--border-glow::after {
