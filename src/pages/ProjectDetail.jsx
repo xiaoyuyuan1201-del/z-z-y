@@ -65,7 +65,21 @@ export default function ProjectDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0C0518] to-[#0C0518]">
+    <div className="min-h-screen bg-gradient-to-b from-[#0C0518] to-[#0C0518] relative overflow-hidden">
+      {/* 全局鼠标跟随光效 */}
+      <div
+        className="pointer-events-none fixed z-[9999] rounded-full"
+        style={{
+          width: '600px',
+          height: '600px',
+          left: mousePos.x,
+          top: mousePos.y,
+          transform: 'translate(-50%, -50%)',
+          background: 'radial-gradient(circle, rgba(132, 0, 255, 0.12) 0%, rgba(132, 0, 255, 0.06) 30%, rgba(132, 0, 255, 0.02) 60%, transparent 70%)',
+          mixBlendMode: 'screen',
+          transition: 'left 0.08s ease-out, top 0.08s ease-out',
+        }}
+      />
       {/* Header */}
       <div className="sticky top-0 z-50 backdrop-blur-xl bg-[#0C0518]/80 border-b border-purple-900/20">
         <div className="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
