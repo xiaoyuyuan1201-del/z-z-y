@@ -7,6 +7,13 @@ import { createPageUrl } from '@/utils';
 
 export default function ProjectDetail() {
   const location = useLocation();
+  const [mousePos, setMousePos] = useState({ x: -1000, y: -1000 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => setMousePos({ x: e.clientX, y: e.clientY });
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
   const searchParams = new URLSearchParams(location.search);
   const projectId = searchParams.get('id');
   
