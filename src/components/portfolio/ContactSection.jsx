@@ -10,7 +10,7 @@ const tools = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-32 px-16 bg-[#0C0518]">
+    <section id="contact" className="py-32 px-16 bg-[#171618]">
       <div className="max-w-7xl mx-auto">
         {/* Top: Title only, full width */}
           <motion.div
