@@ -11,7 +11,10 @@ export default function WorksSection({ projects, isLoading }) {
 
   const filteredProjects = activeCategory === '全部' ?
   projects :
-  projects.filter((p) => p.category === activeCategory);
+  projects.filter((p) => {
+    if (activeCategory === '动效设计') return p.category === '动效设计' || p.category === '动效';
+    return p.category === activeCategory;
+  });
 
   return (
     <section id="works" className="bg-gradient-to-b py-24 px-16 from-[#0C0518] to-[#0C0518]">
