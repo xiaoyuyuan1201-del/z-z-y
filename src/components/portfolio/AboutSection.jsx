@@ -95,7 +95,7 @@ export default function AboutSection() {
 
             <div className="relative bg-gradient-to-br from-[#0f0a1f]/90 via-[#1a0f2e]/80 to-[#0f0a1f]/90 backdrop-blur-2xl rounded-3xl p-8 border border-purple-500/30 shadow-2xl shadow-purple-900/20 sticky top-8 overflow-hidden">
               {/* Animated background gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 opacity-50" />
+              <div className="bg-gradient-to-br opacity-50 absolute inset-0 from-purple-500/5 via-transparent to-pink-500/5" />
               <div className="absolute top-0 right-0 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
               <div className="absolute bottom-0 left-0 w-40 h-40 bg-pink-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
               
@@ -122,7 +122,7 @@ export default function AboutSection() {
               </div>
 
               {/* Basic Info */}
-              <div className="relative space-y-3 text-sm mb-8 z-10">
+              <div className="mb-4 text-sm relative space-y-3 z-10">
                 <div className="grid grid-cols-2 gap-3">
                   <div className="bg-gradient-to-br pt-1 pr-3 pb-1 pl-3 rounded-xl group relative from-purple-500/10 to-purple-600/5 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                     <div className="text-neutral-400 text-[10px] uppercase tracking-wider mb-1 font-light">年龄</div>
@@ -172,7 +172,7 @@ export default function AboutSection() {
               </div>
 
               {/* Tools */}
-              <div className="relative pt-6 border-t border-purple-500/20 z-10">
+              <div className="relative border-t border-purple-500/20 z-10">
                 <h4 className="text-white text-base font-medium mb-5">技能工具</h4>
                 <div className="flex flex-wrap gap-2">
                   {['Figma', 'Sketch', 'Adobe XD', 'Photoshop', 'Illustrator', 'After Effects', 'Blender', 'Midjourney', 'Stable Diffusion', 'Framer'].map((tool) =>
