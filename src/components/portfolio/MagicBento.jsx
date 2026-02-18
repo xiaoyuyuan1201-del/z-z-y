@@ -488,7 +488,7 @@ const MagicBento = ({
               grid-template-columns: repeat(4, 1fr);
             }
             
-            .card-responsive .card:nth-child(3) {
+            .card-responsive .card:nth-child(1) {
               grid-column: span 2;
               grid-row: span 2;
             }
