@@ -488,19 +488,15 @@ const MagicBento = ({
               grid-template-columns: repeat(4, 1fr);
             }
             
-            .card-responsive .card:nth-child(3) {
+            /* UI/UX 设计 (1st) - largest, spans 2 cols x 2 rows */
+            .card-responsive .card:nth-child(1) {
               grid-column: span 2;
               grid-row: span 2;
             }
             
-            .card-responsive .card:nth-child(4) {
-              grid-column: 1 / span 2;
-              grid-row: 2 / span 2;
-            }
-            
-            .card-responsive .card:nth-child(6) {
-              grid-column: 4;
-              grid-row: 3;
+            /* 动效设计 (3rd) - medium, spans 2 cols */
+            .card-responsive .card:nth-child(3) {
+              grid-column: span 2;
             }
           }
           
