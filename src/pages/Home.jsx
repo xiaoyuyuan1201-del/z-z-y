@@ -15,52 +15,9 @@ import Footer from '@/components/portfolio/Footer';
 
 export default function Home() {
   const containerRef = useRef(null);
-  const mouseSpotRef = useRef(null);
   const { scrollY } = useScroll();
   const yParallax = useTransform(scrollY, [0, 500], [0, 150]);
-
-  useEffect(() => {
-    const spot = document.createElement('div');
-    spot.style.cssText = `
-      position: fixed;
-      width: 700px;
-      height: 700px;
-      border-radius: 50%;
-      pointer-events: none;
-      background: radial-gradient(circle,
-        rgba(132, 0, 255, 0.12) 0%,
-        rgba(132, 0, 255, 0.06) 30%,
-        rgba(132, 0, 255, 0.02) 60%,
-        transparent 70%
-      );
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: opacity 0.3s ease;
-      mix-blend-mode: screen;
-      opacity: 0;
-    `;
-    document.body.appendChild(spot);
-    mouseSpotRef.current = spot;
-
-    const handleMouseMove = (e) => {
-      spot.style.left = e.clientX + 'px';
-      spot.style.top = e.clientY + 'px';
-      spot.style.opacity = '1';
-    };
-    const handleMouseLeave = () => {
-      spot.style.opacity = '0';
-    };
-
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseleave', handleMouseLeave);
-
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseleave', handleMouseLeave);
-      spot.parentNode?.removeChild(spot);
-    };
-  }, []);
-
+  
   const { data: projects = [], isLoading } = useQuery({
     queryKey: ['projects'],
     queryFn: () => base44.entities.Project.list('-created_date'),

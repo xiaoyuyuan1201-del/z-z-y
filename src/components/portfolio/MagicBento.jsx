@@ -411,7 +411,7 @@ const GlobalSpotlight = ({
 
 const BentoCardGrid = ({ children, gridRef }) => (
   <div
-    className="bento-section grid gap-2 p-3 max-w-[67rem] select-none relative"
+    className="bento-section grid gap-2 p-3 max-w-[54rem] select-none relative"
     style={{ fontSize: 'clamp(1rem, 0.9rem + 0.5vw, 1.5rem)' }}
     ref={gridRef}
   >
@@ -488,15 +488,19 @@ const MagicBento = ({
               grid-template-columns: repeat(4, 1fr);
             }
             
-            /* UI/UX 设计 (1st) - largest, spans 2 cols x 2 rows */
-            .card-responsive .card:nth-child(1) {
+            .card-responsive .card:nth-child(3) {
               grid-column: span 2;
               grid-row: span 2;
             }
             
-            /* 动效设计 (3rd) - medium, spans 2 cols */
-            .card-responsive .card:nth-child(3) {
-              grid-column: span 2;
+            .card-responsive .card:nth-child(4) {
+              grid-column: 1 / span 2;
+              grid-row: 2 / span 2;
+            }
+            
+            .card-responsive .card:nth-child(6) {
+              grid-column: 4;
+              grid-row: 3;
             }
           }
           

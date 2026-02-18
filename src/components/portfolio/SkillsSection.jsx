@@ -41,8 +41,6 @@ const skills = [
   }
 ];
 
-// Order: UI/UX(1st,2x2大格), 3D建模(2nd), 动效设计(3rd,2cols宽), AI创作(4th), 视觉设计(5th), 原型交互(6th)
-
 export default function SkillsSection() {
   return (
     <section className="bg-gradient-to-b py-24 px-6 md:px-16 from-[#0C0518] to-[#0C0518]">
