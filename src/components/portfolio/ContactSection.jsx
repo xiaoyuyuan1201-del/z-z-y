@@ -60,6 +60,15 @@ export default function ContactSection() {
                 <ExternalLink className="w-5 h-5" />
                 <span>Behance / Dribbble / 站酷</span>
               </a>
+
+              <a
+                href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698ddbdd72ba750ccf34f1a0/a12a6927a_.pdf"
+                download="曾紫钰_简历.pdf"
+                className="inline-flex items-center gap-2 mt-4 px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white rounded-full text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/30"
+              >
+                <ExternalLink className="w-4 h-4" />
+                下载完整简历
+              </a>
             </div>
           </motion.div>
 
