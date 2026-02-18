@@ -34,6 +34,20 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#0C0518] relative overflow-hidden" ref={containerRef}>
+      {/* 全局鼠标跟随光效 */}
+      <div
+        className="pointer-events-none fixed z-[9999] rounded-full"
+        style={{
+          width: '600px',
+          height: '600px',
+          left: mousePos.x,
+          top: mousePos.y,
+          transform: 'translate(-50%, -50%)',
+          background: 'radial-gradient(circle, rgba(132, 0, 255, 0.12) 0%, rgba(132, 0, 255, 0.06) 30%, rgba(132, 0, 255, 0.02) 60%, transparent 70%)',
+          mixBlendMode: 'screen',
+          transition: 'left 0.08s ease-out, top 0.08s ease-out',
+        }}
+      />
       {/* 舞台灯光背景效果 */}
       <style>{`
         @keyframes lightPulse {
