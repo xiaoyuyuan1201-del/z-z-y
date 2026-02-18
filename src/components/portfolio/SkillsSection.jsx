@@ -5,9 +5,9 @@ import MagicBento from './MagicBento';
 const skills = [
   {
     color: '#0f0a1f',
-    title: 'UI/UX 设计',
-    description: '创造直觉、优雅的用户界面与交互体验',
-    label: 'UI/UX'
+    title: '动效设计',
+    description: '为界面注入生命力与流畅体验',
+    label: 'Motion'
   },
   {
     color: '#0f0a1f',
@@ -17,9 +17,10 @@ const skills = [
   },
   {
     color: '#0f0a1f',
-    title: '动效设计',
-    description: '为界面注入生命力与流畅体验',
-    label: 'Motion'
+    title: 'UI/UX 设计',
+    description: '创造直觉、优雅的用户界面与交互体验',
+    label: 'UI/UX',
+    span: true
   },
   {
     color: '#0f0a1f',
