@@ -17,15 +17,7 @@ export default function Home() {
   const containerRef = useRef(null);
   const { scrollY } = useScroll();
   const yParallax = useTransform(scrollY, [0, 500], [0, 150]);
-  const [mousePos, setMousePos] = useState({ x: -1000, y: -1000 });
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
   
   const { data: projects = [], isLoading } = useQuery({
     queryKey: ['projects'],
