@@ -122,7 +122,7 @@ export default function AboutSection() {
               </div>
 
               {/* Basic Info */}
-              <div className="px-2 text-sm relative space-y-3 z-10">
+              <div className="relative space-y-3 text-sm mb-8 z-10">
                 <div className="grid grid-cols-2 gap-3">
                   <div className="bg-gradient-to-br pt-1 pr-3 pb-1 pl-3 rounded-xl group relative from-purple-500/10 to-purple-600/5 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                     <div className="text-neutral-400 text-[10px] uppercase tracking-wider mb-1 font-light">年龄</div>
@@ -150,23 +150,23 @@ export default function AboutSection() {
                 </div>
                 
                 <div className="space-y-4">
-                  <a href="tel:18373296050" className="pt-2 pr-3 pb-3 pl-3 text-base rounded-xl flex items-center gap-4 hover:bg-purple-500/5 transition-all duration-300 group">联系电话
-18373296050
-
-
-
-
-
-
+                  <a href="tel:18373296050" className="flex items-center gap-4 p-3 rounded-xl hover:bg-purple-500/5 transition-all duration-300 group">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-600/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-purple-500/20">
+                      <Phone className="w-4 h-4 text-purple-300" />
+                    </div>
+                    <div>
+                      <div className="text-neutral-500 text-xs mb-0.5">联系电话</div>
+                      <div className="text-white text-sm font-medium">18373296050</div>
+                    </div>
                   </a>
-                  <a href="mailto:2944905483@qq.com" className="px-3 py-2 rounded-xl flex items-center gap-4 hover:bg-purple-500/5 transition-all duration-300 group">邮箱地址
-2944905483@qq.com
-
-
-
-
-
-
+                  <a href="mailto:2944905483@qq.com" className="flex items-center gap-4 p-3 rounded-xl hover:bg-purple-500/5 transition-all duration-300 group">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500/20 to-pink-600/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-pink-500/20">
+                      <Mail className="w-4 h-4 text-pink-300" />
+                    </div>
+                    <div>
+                      <div className="text-neutral-500 text-xs mb-0.5">邮箱地址</div>
+                      <div className="text-white text-xs font-medium break-all">2944905483@qq.com</div>
+                    </div>
                   </a>
                 </div>
               </div>
@@ -174,7 +174,7 @@ export default function AboutSection() {
               {/* Tools */}
               <div className="relative pt-6 border-t border-purple-500/20 z-10">
                 <h4 className="text-white text-base font-medium mb-5">技能工具</h4>
-                <div className="pt-1 flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2">
                   {['Figma', 'Sketch', 'Adobe XD', 'Photoshop', 'Illustrator', 'After Effects', 'Blender', 'Midjourney', 'Stable Diffusion', 'Framer'].map((tool) =>
                   <span
                     key={tool}
