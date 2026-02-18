@@ -188,7 +188,8 @@ export default function AboutSection() {
 
               {/* Resume Download */}
               <a
-                href="#"
+                href="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698ddbdd72ba750ccf34f1a0/a12a6927a_.pdf"
+                download="曾紫钰_简历.pdf"
                 className="relative mt-8 w-full flex items-center justify-center gap-3 px-8 py-5 bg-gradient-to-r from-purple-500 via-purple-600 to-pink-500 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-purple-500/40 hover:scale-[1.03] transition-all duration-300 group overflow-hidden z-10">
 
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-pink-600 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
