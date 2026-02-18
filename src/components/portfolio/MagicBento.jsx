@@ -488,9 +488,40 @@ const MagicBento = ({
               grid-template-columns: repeat(4, 1fr);
             }
             
+            /* 动效设计 - 小卡 左上 */
             .card-responsive .card:nth-child(1) {
-              grid-column: span 2;
-              grid-row: span 2;
+              grid-column: 1;
+              grid-row: 1;
+            }
+            
+            /* 3D建模 - 小卡 左上 */
+            .card-responsive .card:nth-child(2) {
+              grid-column: 2;
+              grid-row: 1;
+            }
+            
+            /* UI/UX - 大卡 右侧 span 2col x 2row */
+            .card-responsive .card:nth-child(3) {
+              grid-column: 3 / span 2;
+              grid-row: 1 / span 2;
+            }
+            
+            /* AI创作 - 大卡 左下 span 2col x 2row */
+            .card-responsive .card:nth-child(4) {
+              grid-column: 1 / span 2;
+              grid-row: 2 / span 2;
+            }
+            
+            /* 视觉设计 - 小卡 右下 */
+            .card-responsive .card:nth-child(5) {
+              grid-column: 3;
+              grid-row: 3;
+            }
+            
+            /* 原型交互 - 小卡 右下 */
+            .card-responsive .card:nth-child(6) {
+              grid-column: 4;
+              grid-row: 3;
             }
           }
           
