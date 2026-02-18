@@ -24,15 +24,15 @@ const createParticleElement = (x, y, color = DEFAULT_GLOW_COLOR) => {
   return el;
 };
 
-const calculateSpotlightValues = radius => ({
+const calculateSpotlightValues = (radius) => ({
   proximity: radius * 0.5,
   fadeDistance: radius * 0.75
 });
 
 const updateCardGlowProperties = (card, mouseX, mouseY, glow, radius) => {
   const rect = card.getBoundingClientRect();
-  const relativeX = ((mouseX - rect.left) / rect.width) * 100;
-  const relativeY = ((mouseY - rect.top) / rect.height) * 100;
+  const relativeX = (mouseX - rect.left) / rect.width * 100;
+  const relativeY = (mouseY - rect.top) / rect.height * 100;
 
   card.style.setProperty('--glow-x', `${relativeX}%`);
   card.style.setProperty('--glow-y', `${relativeY}%`);
@@ -64,7 +64,7 @@ const ParticleCard = ({
 
     const { width, height } = cardRef.current.getBoundingClientRect();
     memoizedParticles.current = Array.from({ length: particleCount }, () =>
-      createParticleElement(Math.random() * width, Math.random() * height, glowColor)
+    createParticleElement(Math.random() * width, Math.random() * height, glowColor)
     );
     particlesInitialized.current = true;
   }, [particleCount, glowColor]);
@@ -74,7 +74,7 @@ const ParticleCard = ({
     timeoutsRef.current = [];
     magnetismAnimationRef.current?.kill();
 
-    particlesRef.current.forEach(particle => {
+    particlesRef.current.forEach((particle) => {
       gsap.to(particle, {
         scale: 0,
         opacity: 0,
@@ -171,7 +171,7 @@ const ParticleCard = ({
       }
     };
 
-    const handleMouseMove = e => {
+    const handleMouseMove = (e) => {
       if (!enableTilt && !enableMagnetism) return;
 
       const rect = element.getBoundingClientRect();
@@ -181,8 +181,8 @@ const ParticleCard = ({
       const centerY = rect.height / 2;
 
       if (enableTilt) {
-        const rotateX = ((y - centerY) / centerY) * -10;
-        const rotateY = ((x - centerX) / centerX) * 10;
+        const rotateX = (y - centerY) / centerY * -10;
+        const rotateY = (x - centerX) / centerX * 10;
 
         gsap.to(element, {
           rotateX,
@@ -206,7 +206,7 @@ const ParticleCard = ({
       }
     };
 
-    const handleClick = e => {
+    const handleClick = (e) => {
       if (!clickEffect) return;
 
       const rect = element.getBoundingClientRect();
@@ -270,11 +270,11 @@ const ParticleCard = ({
     <div
       ref={cardRef}
       className={`${className} relative overflow-hidden`}
-      style={{ ...style, position: 'relative', overflow: 'hidden' }}
-    >
+      style={{ ...style, position: 'relative', overflow: 'hidden' }}>
+
       {children}
-    </div>
-  );
+    </div>);
+
 };
 
 const GlobalSpotlight = ({
@@ -314,13 +314,13 @@ const GlobalSpotlight = ({
     document.body.appendChild(spotlight);
     spotlightRef.current = spotlight;
 
-    const handleMouseMove = e => {
+    const handleMouseMove = (e) => {
       if (!spotlightRef.current || !gridRef.current) return;
 
       const section = gridRef.current.closest('.bento-section');
       const rect = section?.getBoundingClientRect();
       const mouseInside =
-        rect && e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
+      rect && e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
 
       isInsideSection.current = mouseInside || false;
       const cards = gridRef.current.querySelectorAll('.card');
@@ -331,7 +331,7 @@ const GlobalSpotlight = ({
           duration: 0.3,
           ease: 'power2.out'
         });
-        cards.forEach(card => {
+        cards.forEach((card) => {
           card.style.setProperty('--glow-intensity', '0');
         });
         return;
@@ -340,13 +340,13 @@ const GlobalSpotlight = ({
       const { proximity, fadeDistance } = calculateSpotlightValues(spotlightRadius);
       let minDistance = Infinity;
 
-      cards.forEach(card => {
+      cards.forEach((card) => {
         const cardElement = card;
         const cardRect = cardElement.getBoundingClientRect();
         const centerX = cardRect.left + cardRect.width / 2;
         const centerY = cardRect.top + cardRect.height / 2;
         const distance =
-          Math.hypot(e.clientX - centerX, e.clientY - centerY) - Math.max(cardRect.width, cardRect.height) / 2;
+        Math.hypot(e.clientX - centerX, e.clientY - centerY) - Math.max(cardRect.width, cardRect.height) / 2;
         const effectiveDistance = Math.max(0, distance);
 
         minDistance = Math.min(minDistance, effectiveDistance);
@@ -369,11 +369,11 @@ const GlobalSpotlight = ({
       });
 
       const targetOpacity =
-        minDistance <= proximity
-          ? 0.8
-          : minDistance <= fadeDistance
-            ? ((fadeDistance - minDistance) / (fadeDistance - proximity)) * 0.8
-            : 0;
+      minDistance <= proximity ?
+      0.8 :
+      minDistance <= fadeDistance ?
+      (fadeDistance - minDistance) / (fadeDistance - proximity) * 0.8 :
+      0;
 
       gsap.to(spotlightRef.current, {
         opacity: targetOpacity,
@@ -384,7 +384,7 @@ const GlobalSpotlight = ({
 
     const handleMouseLeave = () => {
       isInsideSection.current = false;
-      gridRef.current?.querySelectorAll('.card').forEach(card => {
+      gridRef.current?.querySelectorAll('.card').forEach((card) => {
         card.style.setProperty('--glow-intensity', '0');
       });
       if (spotlightRef.current) {
@@ -409,15 +409,15 @@ const GlobalSpotlight = ({
   return null;
 };
 
-const BentoCardGrid = ({ children, gridRef }) => (
-  <div
-    className="bento-section grid gap-2 p-3 max-w-[75.625rem] select-none relative"
-    style={{ fontSize: 'clamp(1rem, 0.9rem + 0.5vw, 1.5rem)' }}
-    ref={gridRef}
-  >
+const BentoCardGrid = ({ children, gridRef }) =>
+<div className="px-10 bento-section grid gap-2 max-w-[75.625rem] select-none relative"
+
+style={{ fontSize: 'clamp(1rem, 0.9rem + 0.5vw, 1.5rem)' }}
+ref={gridRef}>
+
     {children}
-  </div>
-);
+  </div>;
+
 
 const useMobileDetection = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -603,22 +603,22 @@ const MagicBento = ({
         `}
       </style>
 
-      {enableSpotlight && (
-        <GlobalSpotlight
-          gridRef={gridRef}
-          disableAnimations={shouldDisableAnimations}
-          enabled={enableSpotlight}
-          spotlightRadius={spotlightRadius}
-          glowColor={glowColor}
-        />
-      )}
+      {enableSpotlight &&
+      <GlobalSpotlight
+        gridRef={gridRef}
+        disableAnimations={shouldDisableAnimations}
+        enabled={enableSpotlight}
+        spotlightRadius={spotlightRadius}
+        glowColor={glowColor} />
+
+      }
 
       <BentoCardGrid gridRef={gridRef}>
         <div className="card-responsive grid gap-2">
           {cardData.map((card, index) => {
             const baseClassName = `card flex flex-col justify-between relative min-h-[200px] w-full max-w-full p-5 rounded-[20px] border border-solid font-light overflow-hidden transition-colors duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] ${
-              enableBorderGlow ? 'card--border-glow' : ''
-            }`;
+            enableBorderGlow ? 'card--border-glow' : ''}`;
+
 
             const cardStyle = {
               backgroundColor: card.color || 'var(--background-dark)',
@@ -641,8 +641,8 @@ const MagicBento = ({
                   glowColor={glowColor}
                   enableTilt={enableTilt}
                   clickEffect={clickEffect}
-                  enableMagnetism={enableMagnetism}
-                >
+                  enableMagnetism={enableMagnetism}>
+
                   <div className="card__header flex justify-between gap-3 relative text-white">
                     <span className="card__label text-base">{card.label}</span>
                   </div>
@@ -651,13 +651,13 @@ const MagicBento = ({
                       {card.title}
                     </h3>
                     <p
-                      className={`card__description text-xs leading-5 opacity-90 ${textAutoHide ? 'text-clamp-2' : ''}`}
-                    >
+                      className={`card__description text-xs leading-5 opacity-90 ${textAutoHide ? 'text-clamp-2' : ''}`}>
+
                       {card.description}
                     </p>
                   </div>
-                </ParticleCard>
-              );
+                </ParticleCard>);
+
             }
 
             return (
@@ -665,10 +665,10 @@ const MagicBento = ({
                 key={index}
                 className={baseClassName}
                 style={cardStyle}
-                ref={el => {
+                ref={(el) => {
                   if (!el) return;
 
-                  const handleMouseMove = e => {
+                  const handleMouseMove = (e) => {
                     if (shouldDisableAnimations) return;
 
                     const rect = el.getBoundingClientRect();
@@ -678,8 +678,8 @@ const MagicBento = ({
                     const centerY = rect.height / 2;
 
                     if (enableTilt) {
-                      const rotateX = ((y - centerY) / centerY) * -10;
-                      const rotateY = ((x - centerX) / centerX) * 10;
+                      const rotateX = (y - centerY) / centerY * -10;
+                      const rotateY = (x - centerX) / centerX * 10;
 
                       gsap.to(el, {
                         rotateX,
@@ -725,7 +725,7 @@ const MagicBento = ({
                     }
                   };
 
-                  const handleClick = e => {
+                  const handleClick = (e) => {
                     if (!clickEffect || shouldDisableAnimations) return;
 
                     const rect = el.getBoundingClientRect();
@@ -773,8 +773,8 @@ const MagicBento = ({
                   el.addEventListener('mousemove', handleMouseMove);
                   el.addEventListener('mouseleave', handleMouseLeave);
                   el.addEventListener('click', handleClick);
-                }}
-              >
+                }}>
+
                 <div className="card__header flex justify-between gap-3 relative text-white">
                   <span className="card__label text-base">{card.label}</span>
                 </div>
@@ -786,13 +786,13 @@ const MagicBento = ({
                     {card.description}
                   </p>
                 </div>
-              </div>
-            );
+              </div>);
+
           })}
         </div>
       </BentoCardGrid>
-    </>
-  );
+    </>);
+
 };
 
 export default MagicBento;
