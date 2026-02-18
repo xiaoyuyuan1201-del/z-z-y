@@ -2,12 +2,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { base44 } from '@/api/base44Client';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ExternalLink, Calendar, Tag } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Calendar, Tag, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 
 export default function ProjectDetail() {
   const location = useLocation();
   const [mousePos, setMousePos] = useState({ x: -1000, y: -1000 });
+  const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
     const handleMouseMove = (e) => setMousePos({ x: e.clientX, y: e.clientY });
@@ -157,6 +158,77 @@ export default function ProjectDetail() {
                     className="w-full h-full"
                   />
                 </div>
+              </div>
+            )}
+
+            {/* Images Gallery Section */}
+            {project.images && project.images.length > 0 && (
+              <div className="mb-12">
+                <h3 className="text-2xl font-light text-white mb-6">项目详图</h3>
+                <div className="relative">
+                  <motion.div
+                    key={imageIndex}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="rounded-2xl overflow-hidden bg-neutral-900"
+                  >
+                    <img 
+                      src={project.images[imageIndex]} 
+                      alt={`${project.title} - ${imageIndex + 1}`}
+                      className="w-full h-auto"
+                    />
+                  </motion.div>
+
+                  {project.images.length > 1 && (
+                    <>
+                      <button
+                        onClick={() => setImageIndex((imageIndex - 1 + project.images.length) % project.images.length)}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/80 rounded-full transition-colors"
+                      >
+                        <ChevronLeft className="w-6 h-6 text-white" />
+                      </button>
+                      <button
+                        onClick={() => setImageIndex((imageIndex + 1) % project.images.length)}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/80 rounded-full transition-colors"
+                      >
+                        <ChevronRight className="w-6 h-6 text-white" />
+                      </button>
+
+                      <div className="flex justify-center gap-2 mt-4">
+                        {project.images.map((_, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() => setImageIndex(idx)}
+                            className={`h-2 rounded-full transition-all ${
+                              idx === imageIndex ? 'bg-purple-500 w-8' : 'bg-neutral-600 w-2 hover:bg-neutral-500'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* PDF Section */}
+            {project.pdf_url && (
+              <div className="mb-12">
+                <h3 className="text-2xl font-light text-white mb-6">项目文档</h3>
+                <a
+                  href={project.pdf_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-6 rounded-2xl border border-purple-500/30 bg-purple-500/5 hover:bg-purple-500/10 transition-colors group"
+                >
+                  <FileText className="w-8 h-8 text-purple-400 group-hover:text-purple-300" />
+                  <div className="flex-1">
+                    <p className="text-white font-medium">查看完整文档</p>
+                    <p className="text-neutral-400 text-sm">点击打开PDF文档</p>
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-purple-400 group-hover:text-purple-300" />
+                </a>
               </div>
             )}
           </motion.div>
