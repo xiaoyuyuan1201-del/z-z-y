@@ -472,9 +472,9 @@ const MagicBento = ({
           
           .card-responsive {
             grid-template-columns: 1fr;
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
-            padding: 0.5rem;
+            padding: 0;
           }
           
           @media (min-width: 600px) {
