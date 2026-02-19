@@ -43,7 +43,7 @@ const skills = [
 
 export default function SkillsSection() {
   return (
-    <section className="bg-gradient-to-b py-24 px-6 md:px-16 from-[#0C0518] to-[#0C0518]">
+    <section className="bg-gradient-to-b py-24 px-10 from-[#0C0518] to-[#0C0518]">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <motion.div
