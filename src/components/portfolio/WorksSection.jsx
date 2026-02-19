@@ -17,7 +17,7 @@ export default function WorksSection({ projects, isLoading }) {
   });
 
   return (
-    <section id="works" className="bg-gradient-to-b py-24 px-16 from-[#0C0518] to-[#0C0518]">
+    <section id="works" className="bg-gradient-to-b py-24 px-10 from-[#0C0518] to-[#0C0518]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
