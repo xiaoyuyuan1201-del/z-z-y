@@ -301,11 +301,10 @@ export default function ProjectDetail() {
             </div>
             <div className="rounded-2xl overflow-hidden border border-purple-500/20 bg-neutral-900">
               <iframe
-                src={`${project.pdf_url}#toolbar=1`}
+                src={`${project.pdf_url}#toolbar=1&view=FitH`}
                 className="w-full"
                 style={{ height: '90vh' }}
                 title="项目文档"
-                type="application/pdf"
               />
             </div>
           </motion.div>
