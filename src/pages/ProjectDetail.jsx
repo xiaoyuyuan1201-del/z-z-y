@@ -216,19 +216,13 @@ export default function ProjectDetail() {
             {project.pdf_url && (
               <div className="mb-12">
                 <h3 className="text-2xl font-light text-white mb-6">项目文档</h3>
-                <a
-                  href={project.pdf_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-6 rounded-2xl border border-purple-500/30 bg-purple-500/5 hover:bg-purple-500/10 transition-colors group"
-                >
-                  <FileText className="w-8 h-8 text-purple-400 group-hover:text-purple-300" />
-                  <div className="flex-1">
-                    <p className="text-white font-medium">查看完整文档</p>
-                    <p className="text-neutral-400 text-sm">点击打开PDF文档</p>
-                  </div>
-                  <ExternalLink className="w-5 h-5 text-purple-400 group-hover:text-purple-300" />
-                </a>
+                <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-neutral-900" style={{ height: '80vh' }}>
+                  <iframe
+                    src={project.pdf_url}
+                    className="w-full h-full"
+                    title="项目文档"
+                  />
+                </div>
               </div>
             )}
           </motion.div>
