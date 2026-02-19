@@ -215,13 +215,30 @@ export default function ProjectDetail() {
             {/* PDF Section */}
             {project.pdf_url && (
               <div className="mb-12">
-                <h3 className="text-2xl font-light text-white mb-6">项目文档</h3>
-                <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-neutral-900" style={{ height: '85vh' }}>
-                  <iframe
-                    src={`https://docs.google.com/viewer?url=${encodeURIComponent(project.pdf_url)}&embedded=true`}
+                <div className="flex items-center justify-between mb-6">
+                  <h3 className="text-2xl font-light text-white">项目文档</h3>
+                  <a
+                    href={project.pdf_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm border border-purple-500/30 hover:bg-purple-500/30 transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    新标签页打开
+                  </a>
+                </div>
+                <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-neutral-900" style={{ height: '90vh' }}>
+                  <object
+                    data={project.pdf_url}
+                    type="application/pdf"
                     className="w-full h-full"
-                    title="项目文档"
-                  />
+                  >
+                    <iframe
+                      src={`https://docs.google.com/viewer?url=${encodeURIComponent(project.pdf_url)}&embedded=true`}
+                      className="w-full h-full border-0"
+                      title="项目文档"
+                    />
+                  </object>
                 </div>
               </div>
             )}
