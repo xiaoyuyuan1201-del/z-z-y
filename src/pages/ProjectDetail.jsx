@@ -216,9 +216,9 @@ export default function ProjectDetail() {
             {project.pdf_url && (
               <div className="mb-12">
                 <h3 className="text-2xl font-light text-white mb-6">项目文档</h3>
-                <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-neutral-900" style={{ height: '80vh' }}>
+                <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-neutral-900" style={{ height: '85vh' }}>
                   <iframe
-                    src={project.pdf_url}
+                    src={`https://docs.google.com/viewer?url=${encodeURIComponent(project.pdf_url)}&embedded=true`}
                     className="w-full h-full"
                     title="项目文档"
                   />
