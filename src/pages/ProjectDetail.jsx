@@ -131,6 +131,42 @@ export default function ProjectDetail() {
           )}
         </motion.div>
 
+        {/* PDF全宽展示区（如果有PDF，放在网格外面） */}
+        {project.pdf_url && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="mb-16"
+          >
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-2xl font-light text-white">项目文档</h3>
+              <a
+                href={project.pdf_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm border border-purple-500/30 hover:bg-purple-500/30 transition-colors"
+              >
+                <ExternalLink className="w-4 h-4" />
+                新标签页打开
+              </a>
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-neutral-900" style={{ height: '100vh' }}>
+              <object
+                data={project.pdf_url}
+                type="application/pdf"
+                className="w-full h-full"
+              >
+                <iframe
+                  src={`https://docs.google.com/viewer?url=${encodeURIComponent(project.pdf_url)}&embedded=true`}
+                  className="w-full h-full border-0"
+                  title="项目文档"
+                />
+              </object>
+            </div>
+          </motion.div>
+        )}
+
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Main Content */}
           <motion.div
