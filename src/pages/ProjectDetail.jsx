@@ -227,7 +227,7 @@ export default function ProjectDetail() {
                     新标签页打开
                   </a>
                 </div>
-                <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-neutral-900" style={{ height: '90vh' }}>
+                <div className="rounded-2xl overflow-hidden border border-purple-500/30 bg-neutral-900" style={{ height: '100vh' }}>
                   <object
                     data={project.pdf_url}
                     type="application/pdf"
