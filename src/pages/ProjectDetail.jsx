@@ -250,6 +250,7 @@ export default function ProjectDetail() {
                     src={img}
                     alt={`${project.title} - ${idx + 1}`}
                     className="w-full h-auto block"
+                    style={{ imageRendering: 'auto', WebkitFontSmoothing: 'antialiased' }}
                   />
                 </motion.div>
               ))}
