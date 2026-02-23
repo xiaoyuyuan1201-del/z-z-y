@@ -3,6 +3,7 @@ import { useLocation, Link } from 'react-router-dom';
 import { base44 } from '@/api/base44Client';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ExternalLink, Calendar, Tag } from 'lucide-react';
+import ImageLightbox from '@/components/portfolio/ImageLightbox';
 import { createPageUrl } from '@/utils';
 
 export default function ProjectDetail() {
