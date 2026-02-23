@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { base44 } from '@/api/base44Client';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ExternalLink, Calendar, Tag, FileText, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Calendar, Tag } from 'lucide-react';
 import { createPageUrl } from '@/utils';
 
 export default function ProjectDetail() {
