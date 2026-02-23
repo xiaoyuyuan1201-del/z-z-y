@@ -249,38 +249,7 @@ export default function ProjectDetail() {
           </motion.div>
         </div>
 
-        {/* Document Image Section - full width below everything */}
-        {project.pdf_url && (
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-16"
-          >
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl font-light text-white flex items-center gap-3">
-                <FileText className="w-6 h-6 text-purple-400" />
-                项目文档
-              </h3>
-              <a
-                href={project.pdf_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 border border-purple-500/40 text-purple-300 rounded-full text-sm hover:bg-purple-500/10 transition-colors"
-              >
-                <ExternalLink className="w-4 h-4" />
-                查看原图
-              </a>
-            </div>
-            <div className="rounded-2xl overflow-hidden border border-purple-500/20 bg-neutral-900">
-              <img
-                src={project.pdf_url}
-                alt="项目文档"
-                className="w-full h-auto"
-              />
-            </div>
-          </motion.div>
-        )}
+
       </div>
     </div>
   );
