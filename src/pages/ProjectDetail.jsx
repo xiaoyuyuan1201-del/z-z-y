@@ -118,7 +118,7 @@ export default function ProjectDetail() {
               <img 
                 src={project.image_url} 
                 alt={project.title}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
               />
             </div>
           ) : (
