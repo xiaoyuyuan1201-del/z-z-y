@@ -241,20 +241,17 @@ export default function ProjectDetail() {
             <h3 className="text-2xl font-light text-white mb-6">项目详图</h3>
             <div className="space-y-4" style={{ marginLeft: '0px', marginRight: '0px' }}>
               {project.images.map((img, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: idx * 0.05 }}
-                  className="rounded-2xl overflow-hidden bg-neutral-900 w-full"
+                  className="rounded-2xl overflow-hidden w-full"
                 >
                   <img
                     src={img}
                     alt={`${project.title} - ${idx + 1}`}
-                    className="w-full h-auto block cursor-zoom-in"
-                    onClick={() => setLightboxImg(img)}
+                    className="w-full h-auto block"
+                    style={{ display: 'block', imageRendering: 'auto' }}
                   />
-                </motion.div>
+                </div>
               ))}
             </div>
           </motion.div>
