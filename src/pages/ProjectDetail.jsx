@@ -161,53 +161,26 @@ export default function ProjectDetail() {
               </div>
             )}
 
-            {/* Images Gallery Section */}
+            {/* Images Gallery Section - vertical scroll */}
             {project.images && project.images.length > 0 && (
               <div className="mb-12">
                 <h3 className="text-2xl font-light text-white mb-6">项目详图</h3>
-                <div className="relative">
-                  <motion.div
-                    key={imageIndex}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="rounded-2xl overflow-hidden bg-neutral-900"
-                  >
-                    <img 
-                      src={project.images[imageIndex]} 
-                      alt={`${project.title} - ${imageIndex + 1}`}
-                      className="w-full h-auto"
-                    />
-                  </motion.div>
-
-                  {project.images.length > 1 && (
-                    <>
-                      <button
-                        onClick={() => setImageIndex((imageIndex - 1 + project.images.length) % project.images.length)}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/80 rounded-full transition-colors"
-                      >
-                        <ChevronLeft className="w-6 h-6 text-white" />
-                      </button>
-                      <button
-                        onClick={() => setImageIndex((imageIndex + 1) % project.images.length)}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/80 rounded-full transition-colors"
-                      >
-                        <ChevronRight className="w-6 h-6 text-white" />
-                      </button>
-
-                      <div className="flex justify-center gap-2 mt-4">
-                        {project.images.map((_, idx) => (
-                          <button
-                            key={idx}
-                            onClick={() => setImageIndex(idx)}
-                            className={`h-2 rounded-full transition-all ${
-                              idx === imageIndex ? 'bg-purple-500 w-8' : 'bg-neutral-600 w-2 hover:bg-neutral-500'
-                            }`}
-                          />
-                        ))}
-                      </div>
-                    </>
-                  )}
+                <div className="space-y-4">
+                  {project.images.map((img, idx) => (
+                    <motion.div
+                      key={idx}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: idx * 0.05 }}
+                      className="rounded-2xl overflow-hidden bg-neutral-900"
+                    >
+                      <img
+                        src={img}
+                        alt={`${project.title} - ${idx + 1}`}
+                        className="w-full h-auto"
+                      />
+                    </motion.div>
+                  ))}
                 </div>
               </div>
             )}
