@@ -230,26 +230,34 @@ export default function ProjectDetail() {
           </motion.div>
         </div>
 
-        {/* Images Gallery - full width with 40px margin */}
-        {project.images && project.images.length > 0 && (
-          <div className="mt-4">
-            <h3 className="text-2xl font-light text-white mb-6">项目详图</h3>
-            <div className="space-y-4">
-              {project.images.map((img, idx) => (
-                <div key={idx} className="w-full">
-                  <img
-                    src={img}
-                    alt={`${project.title} - ${idx + 1}`}
-                    className="w-full h-auto block rounded-2xl"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-
       </div>
+
+      {/* Images Gallery - 突破容器限制，全宽显示确保清晰度 */}
+      {project.images && project.images.length > 0 && (
+        <div className="mt-4 px-[100px]">
+          <h3 className="text-2xl font-light text-white mb-6">项目详图</h3>
+          <div className="space-y-4">
+            {project.images.map((img, idx) => (
+              <img
+                key={idx}
+                src={img}
+                alt={`${project.title} - ${idx + 1}`}
+                style={{
+                  display: 'block',
+                  width: '100%',
+                  height: 'auto',
+                  imageRendering: 'high-quality',
+                  WebkitFontSmoothing: 'antialiased',
+                  transform: 'translateZ(0)',
+                  backfaceVisibility: 'hidden',
+                  willChange: 'auto',
+                }}
+                className="rounded-2xl"
+              />
+            ))}
+          </div>
+        </div>
+      )}
     {lightboxImg && (
       <ImageLightbox
         src={lightboxImg}
