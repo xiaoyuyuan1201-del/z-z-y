@@ -8,7 +8,6 @@ import { createPageUrl } from '@/utils';
 export default function ProjectDetail() {
   const location = useLocation();
   const [mousePos, setMousePos] = useState({ x: -1000, y: -1000 });
-  const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
     const handleMouseMove = (e) => setMousePos({ x: e.clientX, y: e.clientY });
