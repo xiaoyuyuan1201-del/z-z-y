@@ -262,6 +262,13 @@ export default function ProjectDetail() {
 
 
       </div>
+    {lightboxImg && (
+      <ImageLightbox
+        src={lightboxImg}
+        alt={project.title}
+        onClose={() => setLightboxImg(null)}
+      />
+    )}
     </div>
   );
 }
