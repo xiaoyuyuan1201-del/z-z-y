@@ -162,7 +162,7 @@ export default function ProjectDetail() {
 
             {/* Images Gallery Section - vertical scroll */}
             {project.images && project.images.length > 0 && (
-              <div className="mb-12">
+              <div className="mb-12 -mx-[calc(33.333%-40px)] px-10">
                 <h3 className="text-2xl font-light text-white mb-6">项目详图</h3>
                 <div className="space-y-4">
                   {project.images.map((img, idx) => (
@@ -177,7 +177,6 @@ export default function ProjectDetail() {
                         src={img}
                         alt={`${project.title} - ${idx + 1}`}
                         className="w-full h-auto block"
-                        style={{ maxWidth: '100%', objectFit: 'contain' }}
                       />
                     </motion.div>
                   ))}
