@@ -244,7 +244,7 @@ export default function ProjectDetail() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: idx * 0.05 }}
-                  className="rounded-2xl overflow-hidden bg-white w-full"
+                  className="rounded-2xl overflow-hidden bg-neutral-900 w-full"
                 >
                   <img
                     src={img}
