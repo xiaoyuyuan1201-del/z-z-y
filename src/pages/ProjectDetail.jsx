@@ -251,8 +251,8 @@ export default function ProjectDetail() {
                   <img
                     src={img}
                     alt={`${project.title} - ${idx + 1}`}
-                    className="w-full h-auto block"
-                    style={{ imageRendering: 'auto', WebkitFontSmoothing: 'antialiased' }}
+                    className="w-full h-auto block cursor-zoom-in"
+                    onClick={() => setLightboxImg(img)}
                   />
                 </motion.div>
               ))}
