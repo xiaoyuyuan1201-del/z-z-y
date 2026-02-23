@@ -171,12 +171,13 @@ export default function ProjectDetail() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: idx * 0.05 }}
-                      className="rounded-2xl overflow-hidden bg-neutral-900"
+                      className="rounded-2xl overflow-hidden bg-neutral-900 w-full"
                     >
                       <img
                         src={img}
                         alt={`${project.title} - ${idx + 1}`}
-                        className="w-full h-auto"
+                        className="w-full h-auto block"
+                        style={{ maxWidth: '100%', objectFit: 'contain' }}
                       />
                     </motion.div>
                   ))}
