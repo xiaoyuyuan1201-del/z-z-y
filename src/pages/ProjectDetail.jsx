@@ -236,11 +236,11 @@ export default function ProjectDetail() {
             <h3 className="text-2xl font-light text-white mb-6">项目详图</h3>
             <div className="space-y-4">
               {project.images.map((img, idx) => (
-                <div key={idx} className="rounded-2xl overflow-hidden w-full">
+                <div key={idx} className="w-full">
                   <img
                     src={img}
                     alt={`${project.title} - ${idx + 1}`}
-                    className="w-full h-auto block"
+                    className="w-full h-auto block rounded-2xl"
                   />
                 </div>
               ))}
