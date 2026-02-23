@@ -232,29 +232,20 @@ export default function ProjectDetail() {
 
         {/* Images Gallery - full width with 40px margin */}
         {project.images && project.images.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-4"
-          >
+          <div className="mt-4">
             <h3 className="text-2xl font-light text-white mb-6">项目详图</h3>
-            <div className="space-y-4" style={{ marginLeft: '0px', marginRight: '0px' }}>
+            <div className="space-y-4">
               {project.images.map((img, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-2xl overflow-hidden w-full"
-                >
+                <div key={idx} className="rounded-2xl overflow-hidden w-full">
                   <img
                     src={img}
                     alt={`${project.title} - ${idx + 1}`}
                     className="w-full h-auto block"
-                    style={{ display: 'block', imageRendering: 'auto' }}
                   />
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
 
 
