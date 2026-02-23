@@ -143,7 +143,11 @@ export default function ProjectDetail() {
             </h1>
             
             <p className="text-xl text-neutral-300 leading-relaxed mb-12">
-              {project.description}
+              {project.description && project.description !== '点击编辑此内容，添加项目描述'
+                ? project.description
+                : project.title === 'AIGC 七夕节运营设计'
+                  ? '情人节作为年度高关注度节日节点，具有强情绪属性与表达需求。围绕"爱与陪伴"的主题，我们策划本次情人节限定活动，通过节日氛围营造与互动机制设计，增强用户参与感与情绪共鸣，提升节日期间的活跃度与品牌好感度。'
+                  : project.description}
             </p>
 
             {/* Video Section */}
