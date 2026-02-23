@@ -20,6 +20,7 @@ export default function ProjectDetail() {
   
   const [project, setProject] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [lightboxImg, setLightboxImg] = useState(null);
 
   useEffect(() => {
     const loadProject = async () => {
