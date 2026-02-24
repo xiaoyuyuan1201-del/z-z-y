@@ -135,8 +135,8 @@ export default function ProjectDetail() {
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Main Content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-2"
           >
