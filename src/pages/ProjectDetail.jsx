@@ -154,6 +154,18 @@ export default function ProjectDetail() {
                   : project.description}
             </p>
 
+            {/* QR Code for specific project */}
+            {project.title === 'AIGC+AE 头像框动效设计' && (
+              <div className="mb-12 flex flex-col items-center gap-4">
+                <img
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698ddbdd72ba750ccf34f1a0/44b874464_image.png"
+                  alt="扫码观看"
+                  className="w-48 h-48 rounded-2xl"
+                />
+                <p className="text-neutral-400 text-base">扫码观看动效演示</p>
+              </div>
+            )}
+
             {/* Video Section */}
             {project.video_url && (
               <div className="mb-12">
