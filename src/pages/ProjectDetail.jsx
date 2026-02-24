@@ -107,7 +107,7 @@ export default function ProjectDetail() {
         </div>
       </div>
 
-      <div className="px-10 py-16" id="main-content">
+      <div className="px-[100px] py-16" id="main-content">
         {/* Hero Image */}
         <motion.div
           initial={{ opacity: 0 }}
