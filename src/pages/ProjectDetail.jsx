@@ -67,7 +67,7 @@ export default function ProjectDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0C0518] to-[#0C0518] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-[#0C0518] to-[#0C0518] relative">
       {/* 全局鼠标跟随光效 */}
       <div
         className="pointer-events-none fixed z-[9999] rounded-full"
