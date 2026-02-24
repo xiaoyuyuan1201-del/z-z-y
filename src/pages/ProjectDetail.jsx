@@ -84,7 +84,7 @@ export default function ProjectDetail() {
       />
       {/* Header */}
       <div className="sticky top-0 z-50 backdrop-blur-xl bg-[#0C0518]/80 border-b border-purple-900/20">
-        <div className="max-w-7xl mx-auto px-10 py-6 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-[100px] py-6 flex items-center justify-between">
           <Link 
             to={createPageUrl('Home')}
             className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors group"
