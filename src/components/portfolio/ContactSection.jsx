@@ -54,12 +54,9 @@ export default function ContactSection() {
                   className="flex items-center gap-3 text-neutral-300 hover:text-purple-400 transition-colors group"
                 >
                   <Mail className="w-5 h-5" />
-                  <span>hello@designer.com</span>
-                </a>
-                
-                <div className="flex items-center gap-3 text-neutral-300">
-                  <MapPin className="w-5 h-5" />
-                  <span>中国 · 深圳</span>
+                  <span>2944905483@qq.com</span>
+...
+                  <span>中国 · 杭州</span>
                 </div>
                 
                 <a 
