@@ -236,7 +236,7 @@ export default function ProjectDetail() {
 
       {/* Images Gallery */}
       {project.images && project.images.length > 0 && (
-        <div className="px-10 mt-16">
+        <div className="px-[100px] mt-16">
           <h3 className="text-2xl font-light text-white mb-6">项目详图</h3>
           <div className="space-y-0">
             {project.images.map((img, idx) => (
