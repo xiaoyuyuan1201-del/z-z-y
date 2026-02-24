@@ -50,12 +50,15 @@ export default function ContactSection() {
               {/* Contact Info */}
               <div className="space-y-4">
                 <a 
-                  href="mailto:hello@designer.com"
+                  href="mailto:2944905483@qq.com"
                   className="flex items-center gap-3 text-neutral-300 hover:text-purple-400 transition-colors group"
                 >
                   <Mail className="w-5 h-5" />
                   <span>2944905483@qq.com</span>
-...
+                </a>
+                
+                <div className="flex items-center gap-3 text-neutral-300">
+                  <MapPin className="w-5 h-5" />
                   <span>中国 · 杭州</span>
                 </div>
                 
