@@ -107,7 +107,7 @@ export default function ProjectDetail() {
         </div>
       </div>
 
-      <div className="pl-[100px] pr-10 py-16" id="main-content">
+      <div className="px-10 py-16" id="main-content">
         {/* Hero Image */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -236,7 +236,7 @@ export default function ProjectDetail() {
 
       {/* Images Gallery */}
       {project.images && project.images.length > 0 && (
-        <div className="pl-[100px] pr-10 mt-16">
+        <div className="px-10 mt-16">
           <h3 className="text-2xl font-light text-white mb-6">项目详图</h3>
           <div className="space-y-0">
             {project.images.map((img, idx) => (
