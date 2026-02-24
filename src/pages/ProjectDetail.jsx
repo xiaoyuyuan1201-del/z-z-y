@@ -230,23 +230,24 @@ export default function ProjectDetail() {
           </motion.div>
         </div>
 
-        {/* Images Gallery */}
-        {project.images && project.images.length > 0 && (
-          <div className="mt-16">
-            <h3 className="text-2xl font-light text-white mb-6">项目详图</h3>
-            <div className="space-y-4">
-              {project.images.map((img, idx) => (
-                <img
-                  key={idx}
-                  src={img}
-                  alt={`${project.title} - ${idx + 1}`}
-                  style={{ display: 'block', width: '100%', height: 'auto' }}
-                />
-              ))}
-            </div>
-          </div>
-        )}
       </div>
+
+      {/* Images Gallery - 突破容器，全屏宽度原尺寸显示 */}
+      {project.images && project.images.length > 0 && (
+        <div className="w-screen relative left-1/2 -translate-x-1/2 mt-16">
+          <h3 className="text-2xl font-light text-white mb-6 px-10">项目详图</h3>
+          <div className="space-y-0">
+            {project.images.map((img, idx) => (
+              <img
+                key={idx}
+                src={img}
+                alt={`${project.title} - ${idx + 1}`}
+                style={{ display: 'block', width: '100%', height: 'auto' }}
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
