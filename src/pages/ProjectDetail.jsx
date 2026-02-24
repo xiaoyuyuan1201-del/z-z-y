@@ -110,8 +110,8 @@ export default function ProjectDetail() {
       <div className="max-w-7xl mx-auto px-[100px] py-16" id="main-content">
         {/* Hero Image */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
