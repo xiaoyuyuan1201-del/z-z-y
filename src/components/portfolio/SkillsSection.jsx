@@ -38,6 +38,12 @@ const skills = [
   title: '原型交互',
   description: '高保真原型与交互设计',
   label: 'Prototype'
+},
+{
+  color: '#0f0a1f',
+  title: 'HTML & CSS',
+  description: '熟练掌握网页结构与样式开发',
+  label: 'Code'
 }];
 
 
