@@ -485,7 +485,7 @@ const MagicBento = ({
           
           @media (min-width: 1024px) {
             .card-responsive {
-              grid-template-columns: repeat(4, 1fr);
+              grid-template-columns: repeat(5, 1fr);
             }
             
             /* UI/UX - 大卡 左上 span 2col x 2row */
@@ -494,41 +494,40 @@ const MagicBento = ({
               grid-row: 1 / span 2;
             }
             
-            /* AI创作 - 大卡 右上 span 2col x 2row */
+            /* AI创作 - 大卡 中间 span 2col x 2row */
             .card-responsive .card:nth-child(2) {
               grid-column: 3 / span 2;
               grid-row: 1 / span 2;
             }
             
-            /* 动效设计 - 小卡 第二排 */
+            /* 动效设计 - 小卡 右上 */
             .card-responsive .card:nth-child(3) {
-              grid-column: 1;
-              grid-row: 3;
+              grid-column: 5;
+              grid-row: 1;
             }
             
-            /* 3D建模 - 小卡 第二排 */
+            /* 3D建模 - 小卡 右下 */
             .card-responsive .card:nth-child(4) {
-              grid-column: 2;
-              grid-row: 3;
+              grid-column: 5;
+              grid-row: 2;
             }
             
             /* 视觉设计 - 小卡 第二排 */
             .card-responsive .card:nth-child(5) {
-              grid-column: 3;
+              grid-column: 1;
               grid-row: 3;
             }
             
             /* 原型交互 - 小卡 第二排 */
             .card-responsive .card:nth-child(6) {
-              grid-column: 4;
+              grid-column: 2;
               grid-row: 3;
             }
             
-            /* HTML & CSS - 不显示（合并到第二排已满）或另起一行 */
+            /* HTML & CSS - 小卡 第二排 */
             .card-responsive .card:nth-child(7) {
-              grid-column: 1 / span 4;
-              grid-row: 4;
-              min-height: 120px;
+              grid-column: 3 / span 3;
+              grid-row: 3;
             }
           }
           
