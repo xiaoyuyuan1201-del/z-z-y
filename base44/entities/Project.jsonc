@@ -1,0 +1,63 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "\u9879\u76ee\u540d\u79f0"
+    },
+    "description": {
+      "type": "string",
+      "description": "\u9879\u76ee\u63cf\u8ff0"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "\u9879\u76ee\u5c01\u9762\u56fe\u7247"
+    },
+    "video_url": {
+      "type": "string",
+      "description": "\u9879\u76ee\u89c6\u9891\u6f14\u793a\u94fe\u63a5"
+    },
+    "pdf_url": {
+      "type": "string",
+      "description": "\u9879\u76eePDF\u6587\u6863\u94fe\u63a5"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "\u9879\u76ee\u8be6\u7ec6\u56fe\u7247\u6570\u7ec4"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "\u8bbe\u8ba1",
+        "\u5f00\u53d1",
+        "\u6444\u5f71",
+        "\u5199\u4f5c",
+        "\u5176\u4ed6",
+        "\u5efa\u6a21",
+        "\u52a8\u6548\u8bbe\u8ba1",
+        "UI\u8bbe\u8ba1"
+      ],
+      "description": "\u9879\u76ee\u5206\u7c7b"
+    },
+    "link": {
+      "type": "string",
+      "description": "\u9879\u76ee\u94fe\u63a5"
+    },
+    "year": {
+      "type": "string",
+      "description": "\u5b8c\u6210\u5e74\u4efd"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "\u662f\u5426\u4e3a\u7cbe\u9009\u9879\u76ee"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}
